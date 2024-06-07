@@ -1,4 +1,4 @@
 rule make
   command = wine make.bat
 
-build test.gam: make game.c dwnhead.c main.cfg
+build test.gam: make main.c dwnhead.c main.cfg

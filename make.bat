@@ -2,10 +2,8 @@
 @set LIB=.\os\lib
 @set INCLUDE=.\os\inc
 
-x6502 rt.asm
-c6502 -C -d             main.c
+x6502                   rt.asm
 c6502 -C -d -aa_dwnhead dwnhead.c
-c6502 -C -d -aa_game    game.c
+c6502 -C -d             main.c
 
 link main.cfg
-filecomb test.gam /r 00 test.tsk 30000 3ffff

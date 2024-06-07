@@ -1,4 +1,3 @@
-#include "dictsys.h"
 #include "filetype.h"
 
 extern U16 app;

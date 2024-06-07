@@ -120,6 +120,290 @@
 .global __OPER1_CONVERSION_STORE
 .global __OPER2_TEMP_STORE
 .global __OPER2_CONVERSION_STORE
+.global __addr_reg
+.global __lib_temp_ptr
+.global __oper1
+.global __oper1_high8
+.global __oper2
+.global __oper2_high8
+.global __stack_ptr
+.global __temp_a_reg
+.global &ALM_ISR_routine
+.global &BRK_ISR_routine
+.global &BuzzerSelfCheck
+.global &ChangCpuFreqTo16M
+.global &ChangCpuFreqTo4M
+.global &ChangCpuFreqTo8M
+.global &CloseAlarm
+.global &CloseCursor
+.global &CT_ISR_routine
+.global &Cursor
+.global &CursorInit
+.global &DirectReadData
+.global &DirectReadData_start
+.global &DirectWriteData
+.global &FIFO_ISR_routine
+.global &GetAutoPowerOffTimeOut
+.global &GTH_ISR_routine
+.global &GTL_ISR_routine
+.global &LcdIcon
+.global &LCDInit
+.global &LCDPowerOff
+.global &LCDPowerOn
+.global &LowBatteryDetection
+.global &MMC_CMD_ISR_routine
+.global &MMC_DIN_ISR_routine
+.global &MMC_DOUT_ISR_routine
+.global &MMC_RSP_ISR_routine
+.global &MoveCursor
+.global &MT_ISR_routine
+.global &NMI_ISR_routine
+.global &OpenAlarm
+.global &OpenCursor
+.global &OpenCursorInit
+.global &PI_ISR_routine
+.global &RXD_ISR_routine
+.global &SetAutoPowerOffTimeOut
+.global &SetStop
+.global &ST1_ISR_routine
+.global &ST2_ISR_routine
+.global &ST3_ISR_routine
+.global &ST4_ISR_routine
+.global &SysAscii
+.global &SysAscii12
+.global &SysCalcScrBufSize
+.global &SysChinese
+.global &SysChinese12
+.global &SysCircle
+.global &SysCircleClear
+.global &SysClearKeyBuffer
+.global &SysCloseCom
+.global &SysClrPA0
+.global &SysCursorReadParam
+.global &SysCursorWriteParam
+.global &SysFillCircle
+.global &SysFillRect
+.global &SysGetDay
+.global &SysGetDownAppStartAddr
+.global &SysGetHour
+.global &SysGetKey
+.global &SysGetKeySound
+.global &SysGetMinute
+.global &SysGetSecond
+.global &SysGetTime
+.global &SysGetTimer1Number
+.global &SysGetVolume
+.global &SysHalt
+.global &SysHorizontalLine
+.global &SysIconAllClear
+.global &SysIconAllRestore
+.global &SysIconAllSave
+.global &SysIconBattery
+.global &SysIconBell
+.global &SysIconCaps
+.global &SysIconDot1
+.global &SysIconDot2
+.global &SysIconDot3
+.global &SysIconDoubleDot
+.global &SysIconDownArrow
+.global &SysIconF1
+.global &SysIconF2
+.global &SysIconF3
+.global &SysIconF4
+.global &SysIconF5
+.global &SysIconF6
+.global &SysIconF7
+.global &SysIconF8
+.global &SysIconKey
+.global &SysIconLeftArrow
+.global &SysIconNum
+.global &SysIconNumber1
+.global &SysIconNumber2
+.global &SysIconNumber3
+.global &SysIconNumber4
+.global &SysIconNumClear
+.global &SysIconRightArrow
+.global &SysIconRing
+.global &SysIconRingClock
+.global &SysIconScrollBar
+.global &SysIconScrollBarDownArrow
+.global &SysIconScrollBarUpArrow
+.global &SysIconSetLeftScrollBar
+.global &SysIconSetRightScrollBar
+.global &SysIconShift
+.global &SysIconSpeaker
+.global &SysIconUpArrow
+.global &SysItalic
+.global &SysLCDClear
+.global &SysLCDFill
+.global &SysLcdPartClear
+.global &SysLcdReverse
+.global &SysLcdSelfTest
+.global &SysLCDVoltage
+.global &SysLcd_Init
+.global &SysLine
+.global &SysLineClear
+.global &SysOpenCom
+.global &SysPartPicture
+.global &SysPicture
+.global &SysPictureDummy
+.global &SysPictureFill
+.global &SysPlayMelody
+.global &SysPrintString
+.global &SysPrintString12
+.global &SysPutPicture
+.global &SysPutPixel
+.global &SysRect
+.global &SysRectClear
+.global &SysRestoreScreen
+.global &SysRestoreScreenEx
+.global &SysSaveScreen
+.global &SysSaveScreenEx
+.global &SysSetDay
+.global &SysSetDownAppStartAddr
+.global &SysSetHour
+.global &SysSetKeySound
+.global &SysSetMinute
+.global &SysSetPA0
+.global &SysSetSecond
+.global &SysSetTime
+.global &SysSetVolume
+.global &SysSleep
+.global &SysStart
+.global &SysStopMelody
+.global &SysTimer1Close
+.global &SysTimer1Open
+.global &SysYinBiao
+.global &TXD_ISR_routine
+.global &UART_ERR_ISR_routine
+.global _DataBankSwitch
+.global _GetDataBankNumber
+.global _get_current_bank_number
+.global _restore_bank_number
+.global _switch_bank_number
+.global _SysMemcmp
+.global _SysMemcpy
+.global _SysReadCom
+.global _SysWriteCom
+.global &AppEnvInit
+.global &AppPowerOffHelper
+.global &atoi
+.global &atol
+.global &fillmem
+.global &GuiDownAppHelp
+.global &GuiEnterPswCheck
+.global &GuiGetCurHelpId
+.global &GuiGetKbdState
+.global &GuiGetMsg
+.global &GuiHelp
+.global &GuiHwSelfCheck
+.global &GuiInit
+.global &GuiInitAppOnReset
+.global &GuiKeyEmuInit
+.global &GuiLeavePswCheck
+.global &GuiLoadDownApp
+.global &GuiMenu
+.global &GuiMsgBox
+.global &GuiMsgBoxHelper
+.global &GuiMsgQueInit
+.global &GuiPushMsg
+.global &GuiQueryBox
+.global &GuiSendMsg
+.global &GuiSetCurHelpId
+.global &GuiSetDefaultHeirApp
+.global &GuiSetInputFilter
+.global &GuiSetKbdState
+.global &GuiSetKbdType
+.global &GuiSetKjDisp
+.global &GuiSingleSelBox
+.global &GuiStartDownApp
+.global &GuiStudyAbhsReciteAwake
+.global &GuiStudyEveryDayRecite
+.global &GuiSwitchApp
+.global &GuiTimeDayIntRefresh
+.global &GuiTimeDjsMsg
+.global &GuiTimeJnrMsg
+.global &GuiTranslateMsg
+.global &GuiWanNianLi
+.global &itoa
+.global &ltoa
+.global &movmem
+.global &Pause
+.global &strcat
+.global &strchr
+.global &strcmp
+.global &strcpy
+.global &strlen
+.global &strncat
+.global &strncmp
+.global &strncpy
+.global &strpos
+.global &strrpos
+.global &SysChnInput
+.global &SysChnInputClose
+.global &SysChnInputInit
+.global &SysChnInputOpen
+.global &SysGetDate
+.global &SysGetVer
+.global &SysMemAllocate
+.global &SysMemFree
+.global &SysMemInit
+.global &SysPrintNum
+.global &SysRand
+.global &SysSrand
+.global &SysSymInput
+.global &SysSymInputClose
+.global &SysSymInputOpen
+.global &TRACEL
+.global &TRACELP
+.global &TraceNum
+.global &TraceNumP
+.global &uitoa
+.global &ultoa
+.global &FileBackupFlash
+.global &FileChangeCardInf
+.global &FileChangeInf
+.global &FileClearChip
+.global &FileClearDataChip
+.global &FileClearIndexChip
+.global &FileClose
+.global &FileCreat
+.global &FileDel
+.global &FileFindFirst
+.global &FileFindNext
+.global &FileFlashStartAdr
+.global &FileFreeSector
+.global &FileGetPhyAdr
+.global &FileNum
+.global &FileOpen
+.global &FileRead
+.global &FileRepairFlash
+.global &FileRestoreFlash
+.global &FileSearch
+.global &FileSearchInf
+.global &FileSectorUnite
+.global &FileSeek
+.global &FileTell
+.global &FileUpdata_Begin
+.global &FileUpdata_End
+.global &FileWrite
+.global &FlashCapacity
+.global &FlashCheckSum
+.global &FlashInit
+.global &fun_fls_clearLog
+.global &gdmtest
+.global &ResetFlash
+.global &SysFileGetLogAdr
+.global CAL_NPAGE_LENGTH
+.global CAL_NPAGE_START
+.global CAL_PAGE0_LENGTH
+.global CAL_PAGE0_START
+.global CARD_NPAGE_LENGTH
+.global DICT_NPAGE_LENGTH
+.global DICT_NPAGE_START
+.global DICT_PAGE0_LENGTH
+.global DICT_PAGE0_START
+
 
 program:		.section
 .program
@@ -374,3 +658,295 @@ __OPER1_TEMP_STORE = 0008H
 __OPER1_CONVERSION_STORE = 0018H
 __OPER2_TEMP_STORE = 0010H
 __OPER2_CONVERSION_STORE = 0020H
+
+;; bios4m
+__addr_reg                       = 26H
+__lib_temp_ptr                   = 2AH
+__oper1                          = 20H
+__oper1_high8                    = 22H
+__oper2                          = 23H
+__oper2_high8                    = 25H
+__stack_ptr                      = 28H
+__temp_a_reg                     = 2CH
+
+;; farbios
+&ALM_ISR_routine = E785H
+&BRK_ISR_routine = E74FH
+&BuzzerSelfCheck = E8A7H
+&ChangCpuFreqTo16M = E7A9H
+&ChangCpuFreqTo4M = E7AFH
+&ChangCpuFreqTo8M = E7ACH
+&CloseAlarm = E898H
+&CloseCursor = E86EH
+&CT_ISR_routine = E782H
+&Cursor = E743H
+&CursorInit = E863H
+&DirectReadData = E7D3H
+&DirectReadData_start = E749H
+&DirectWriteData = E7D6H
+&FIFO_ISR_routine = E773H
+&GetAutoPowerOffTimeOut = E89EH
+&GTH_ISR_routine = E77CH
+&GTL_ISR_routine = E779H
+&LcdIcon = E7FDH
+&LCDInit = E73AH
+&LCDPowerOff = E73DH
+&LCDPowerOn = E740H
+&LowBatteryDetection = E7A6H
+&main = E737H
+&MMC_CMD_ISR_routine = E761H
+&MMC_DIN_ISR_routine = E76AH
+&MMC_DOUT_ISR_routine = E767H
+&MMC_RSP_ISR_routine = E764H
+&MoveCursor = E871H
+&MT_ISR_routine = E77FH
+&NMI_ISR_routine = E74CH
+&OpenAlarm = E895H
+&OpenCursor = E866H
+&OpenCursorInit = E86BH
+&PI_ISR_routine = E752H
+&RXD_ISR_routine = E770H
+&SetAutoPowerOffTimeOut = E89BH
+&SetStop = E79DH
+&ST1_ISR_routine = E755H
+&ST2_ISR_routine = E758H
+&ST3_ISR_routine = E75BH
+&ST4_ISR_routine = E75EH
+&SysAscii = E7BBH
+&SysAscii12 = E883H
+&SysCalcScrBufSize = E874H
+&SysChinese = E7BEH
+&SysChinese12 = E880H
+&SysCircle = E788H
+&SysCircleClear = E8BCH
+&SysClearKeyBuffer = E7D0H
+&SysCloseCom = E8D4H
+&SysClrPA0 = E892H
+&SysCursorReadParam = E8E9H
+&SysCursorWriteParam = E8F5H
+&SysFillCircle = E78BH
+&SysFillRect = E87DH
+&SysGetDay = E7E2H
+&SysGetDownAppStartAddr = E8ADH
+&SysGetHour = E7DFH
+&SysGetKey = E7C1H
+&SysGetKeySound = E7C7H
+&SysGetMinute = E7DCH
+&SysGetSecond = E7D9H
+&SysGetTime = E7F4H
+&SysGetTimer1Number = E7B8H
+&SysGetVolume = E7CDH
+&SysHalt = E7A0H
+&SysHorizontalLine = E8B6H
+&SysIconAllClear = E8ECH
+&SysIconAllRestore = E8F2H
+&SysIconAllSave = E8EFH
+&SysIconBattery = E80CH
+&SysIconBell = E854H
+&SysIconCaps = E848H
+&SysIconDot1 = E824H
+&SysIconDot2 = E827H
+&SysIconDot3 = E82AH
+&SysIconDoubleDot = E8B3H
+&SysIconDownArrow = E809H
+&SysIconF1 = E82DH
+&SysIconF2 = E830H
+&SysIconF3 = E833H
+&SysIconF4 = E836H
+&SysIconF5 = E839H
+&SysIconF6 = E83CH
+&SysIconF7 = E83FH
+&SysIconF8 = E842H
+&SysIconKey = E857H
+&SysIconLeftArrow = E800H
+&SysIconNum = E8D7H
+&SysIconNumber1 = E818H
+&SysIconNumber2 = E81BH
+&SysIconNumber3 = E81EH
+&SysIconNumber4 = E821H
+&SysIconNumClear = E8E0H
+&SysIconRightArrow = E803H
+&SysIconRing = E84BH
+&SysIconRingClock = E84EH
+&SysIconScrollBar = E80FH
+&SysIconScrollBarDownArrow = E812H
+&SysIconScrollBarUpArrow = E815H
+&SysIconSetLeftScrollBar = E8E3H
+&SysIconSetRightScrollBar = E8E6H
+&SysIconShift = E845H
+&SysIconSpeaker = E851H
+&SysIconUpArrow = E806H
+&SysItalic = E8C2H
+&SysLCDClear = E7F7H
+&SysLCDFill = E8DDH
+&SysLcdPartClear = E85DH
+&SysLcdReverse = E860H
+&SysLcdSelfTest = E8DAH
+&SysLCDVoltage = E8C8H
+&SysLcd_Init = E8B0H
+&SysLine = E794H
+&SysLineClear = E8B9H
+&SysOpenCom = E8D1H
+&SysPartPicture = E8C5H
+&SysPicture = E78EH
+&SysPictureDummy = E889H
+&SysPictureFill = E791H
+&SysPlayMelody = E8A1H
+&SysPrintString = E79AH
+&SysPrintString12 = E886H
+&SysPutPicture = E85AH
+&SysPutPixel = E7FAH
+&SysRect = E797H
+&SysRectClear = E8BFH
+&SysRestoreScreen = E87AH
+&SysRestoreScreenEx = E8CEH
+&SysSaveScreen = E877H
+&SysSaveScreenEx = E8CBH
+&SysSetDay = E7EEH
+&SysSetDownAppStartAddr = E8AAH
+&SysSetHour = E7EBH
+&SysSetKeySound = E7C4H
+&SysSetMinute = E7E8H
+&SysSetPA0 = E88FH
+&SysSetSecond = E7E5H
+&SysSetTime = E7F1H
+&SysSetVolume = E7CAH
+&SysSleep = E7A3H
+&SysStart = E746H
+&SysStopMelody = E8A4H
+&SysTimer1Close = E7B5H
+&SysTimer1Open = E7B2H
+&SysYinBiao = E88CH
+&TXD_ISR_routine = E76DH
+&UART_ERR_ISR_routine = E776H
+_DataBankSwitch = E907H
+_GetDataBankNumber = E90AH
+_get_current_bank_number = E8F8H
+_restore_bank_number = E8FEH
+_switch_bank_number = E8FBH
+_SysMemcmp = E904H
+_SysMemcpy = E901H
+_SysReadCom = E910H
+_SysWriteCom = E90DH
+
+;; farcall
+&AppEnvInit = E95FH
+&AppPowerOffHelper = E977H
+&atoi = E703H
+&atol = E706H
+&fillmem = E700H
+&GuiDownAppHelp = E980H
+&GuiEnterPswCheck = E9A7H
+&GuiGetCurHelpId = E9A4H
+&GuiGetKbdState = E965H
+&GuiGetMsg = E935H
+&GuiHelp = E96BH
+&GuiHwSelfCheck = E97DH
+&GuiInit = E932H
+&GuiInitAppOnReset = E989H
+&GuiKeyEmuInit = E962H
+&GuiLeavePswCheck = E9AAH
+&GuiLoadDownApp = E998H
+&GuiMenu = E94DH
+&GuiMsgBox = E953H
+&GuiMsgBoxHelper = E96EH
+&GuiMsgQueInit = E929H
+&GuiPushMsg = E92FH
+&GuiQueryBox = E950H
+&GuiSendMsg = E92CH
+&GuiSetCurHelpId = E9A1H
+&GuiSetDefaultHeirApp = E98CH
+&GuiSetInputFilter = E938H
+&GuiSetKbdState = E968H
+&GuiSetKbdType = E93BH
+&GuiSetKjDisp = E974H
+&GuiSingleSelBox = E956H
+&GuiStartDownApp = E995H
+&GuiStudyAbhsReciteAwake = E986H
+&GuiStudyEveryDayRecite = E983H
+&GuiSwitchApp = E941H
+&GuiTimeDayIntRefresh = E97AH
+&GuiTimeDjsMsg = E98FH
+&GuiTimeJnrMsg = E992H
+&GuiTranslateMsg = E93EH
+&GuiWanNianLi = E971H
+&itoa = E709H
+&ltoa = E70FH
+&movmem = E70CH
+&Pause = E9B0H
+&strcat = E712H
+&strchr = E715H
+&strcmp = E718H
+&strcpy = E71BH
+&strlen = E71EH
+&strncat = E724H
+&strncmp = E727H
+&strncpy = E72DH
+&strpos = E721H
+&strrpos = E72AH
+&SysChnInput = E919H
+&SysChnInputClose = E916H
+&SysChnInputInit = E91CH
+&SysChnInputOpen = E913H
+&SysGetDate = E99EH
+&SysGetVer = E99BH
+&SysMemAllocate = E947H
+&SysMemFree = E94AH
+&SysMemInit = E944H
+&SysPrintNum = E9ADH
+&SysRand = E959H
+&SysSrand = E95CH
+&SysSymInput = E925H
+&SysSymInputClose = E922H
+&SysSymInputOpen = E91FH
+&TRACEL = E9B3H
+&TRACELP = E9B6H
+&TraceNum = E9B9H
+&TraceNumP = E9BCH
+&uitoa = E730H
+&ultoa = E733H
+
+;; flash
+&FileBackupFlash = EA13H
+&FileChangeCardInf = E9FEH
+&FileChangeInf = E9E3H
+&FileClearChip = EA0AH
+&FileClearDataChip = E9CBH
+&FileClearIndexChip = E9E6H
+&FileClose = E9D1H
+&FileCreat = E9C8H
+&FileDel = E9DDH
+&FileFindFirst = EA1CH
+&FileFindNext = EA16H
+&FileFlashStartAdr = EA01H
+&FileFreeSector = E9E0H
+&FileGetPhyAdr = EA04H
+&FileNum = E9E9H
+&FileOpen = E9CEH
+&FileRead = E9D7H
+&FileRepairFlash = EA10H
+&FileRestoreFlash = EA19H
+&FileSearch = E9ECH
+&FileSearchInf = E9F8H
+&FileSectorUnite = E9FBH
+&FileSeek = E9EFH
+&FileTell = E9DAH
+&FileUpdata_Begin = E9F2H
+&FileUpdata_End = E9F5H
+&FileWrite = E9D4H
+&FlashCapacity = E9BFH
+&FlashCheckSum = EA1FH
+&FlashInit = E9C2H
+&fun_fls_clearLog = EA0DH
+&gdmtest = EA22H
+&ResetFlash = E9C5H
+&SysFileGetLogAdr = EA07H
+CAL_NPAGE_LENGTH = 00A0H
+CAL_NPAGE_START = 2300H
+CAL_PAGE0_LENGTH = 0000H
+CAL_PAGE0_START = 009EH
+CARD_NPAGE_LENGTH = 0100H
+DICT_NPAGE_LENGTH = 0000H
+DICT_NPAGE_START = 2300H
+DICT_PAGE0_LENGTH = 0000H
+DICT_PAGE0_START = 009EH
