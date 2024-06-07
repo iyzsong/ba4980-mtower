@@ -113,8 +113,9 @@
 .global __long_to_float_interface
 .global __mult_float
 .global __sub_float
-.extern ___fraction_table
-.extern ___power_table
+;; XXX: how those table will be used?
+;; .global ___fraction_table       0004736A
+;; .global ___power_table          000473B2
 .global __FUNCTION_RET_ADDR
 .global __OPER1_TEMP_STORE
 .global __OPER1_CONVERSION_STORE
@@ -403,132 +404,6 @@
 .global DICT_NPAGE_START
 .global DICT_PAGE0_LENGTH
 .global DICT_PAGE0_START
-
-
-program:		.section
-.program
-rt_dummy:
-	lda	__FUNCTION_RET_ADDR
-	lda	__OPER1_TEMP_STORE
-	lda	__OPER2_TEMP_STORE
-	lda	__OPER1_CONVERSION_STORE
-	lda	__OPER2_CONVERSION_STORE
-	jsr	___div_char
-	jsr	___div_int
-	jsr	___div_long
-	jsr	___mult_char
-	jsr	___mult_int
-	jsr	___mult_long
-	jsr	__add_long
-	jsr	__and_long
-	jsr	__banked_function_call
-	jsr	__cmp_float
-	jsr	__cmp_int
-	jsr	__cmp_long
-	jsr	__div_char
-	jsr	__div_int
-	jsr	__div_long
-	jsr	__exts_oper1_char_to_float
-	jsr	__exts_oper1_char_to_int
-	jsr	__exts_oper1_char_to_long
-	jsr	__exts_oper1_int_to_float
-	jsr	__exts_oper1_int_to_long
-	jsr	__exts_oper1_long_to_float
-	jsr	__exts_oper2_char_to_float
-	jsr	__exts_oper2_char_to_int
-	jsr	__exts_oper2_char_to_long
-	jsr	__exts_oper2_int_to_float
-	jsr	__exts_oper2_int_to_long
-	jsr	__exts_oper2_long_to_float
-	jsr	__indirect_call
-	jsr	__ld_oper1_conversion_store_addr
-	jsr	__ld_oper1_temp_store_addr
-	jsr	__ld_oper2_conversion_store_addr
-	jsr	__ld_oper2_temp_store_addr
-	jsr	__mod_char
-	jsr	__mod_int
-	jsr	__mod_long
-	jsr	__mult_char
-	jsr	__mult_int
-	jsr	__mult_long
-	jsr	__neg_as_long
-	jsr	__neg_float
-	jsr	__neg_int
-	jsr	__neg_long
-	jsr	__neg_oper2_int
-	jsr	__not_long
-	jsr	__oper1_float_to_char
-	jsr	__oper1_float_to_int
-	jsr	__oper1_float_to_long
-	jsr	__oper1_long_to_char
-	jsr	__oper1_long_to_int
-	jsr	__oper2_float_to_char
-	jsr	__oper2_float_to_int
-	jsr	__oper2_float_to_long
-	jsr	__oper2_long_to_char
-	jsr	__oper2_long_to_int
-	jsr	__or_long
-	jsr	__s_sr_char
-	jsr	__s_sr_int
-	jsr	__s_sr_long
-	jsr	__scale_oper1_ptr3
-	jsr	__scale_oper2_ptr3
-	jsr	__sl_char
-	jsr	__sl_int
-	jsr	__sl_long
-	jsr	__store_char_funct_arg
-	jsr	__store_float
-	jsr	__store_float_funct_arg
-	jsr	__store_float_oper2_indirect
-	jsr	__store_int_funct_arg
-	jsr	__store_long
-	jsr	__store_long_funct_arg
-	jsr	__store_long_oper2_indirect
-	jsr	__sub_long
-	jsr	__switch_comparison
-	jsr	__u_sr_char
-	jsr	__u_sr_int
-	jsr	__u_sr_long
-	jsr	__uns_div_char
-	jsr	__uns_div_int
-	jsr	__uns_div_long
-	jsr	__uns_mod_char
-	jsr	__uns_mod_int
-	jsr	__uns_mod_long
-	jsr	__uns_mult_char
-	jsr	__uns_mult_int
-	jsr	__uns_mult_long
-	jsr	__uns_oper1_char_to_float
-	jsr	__uns_oper1_char_to_long
-	jsr	__uns_oper1_int_to_float
-	jsr	__uns_oper1_int_to_long
-	jsr	__uns_oper1_long_to_float
-	jsr	__uns_oper2_char_to_float
-	jsr	__uns_oper2_char_to_long
-	jsr	__uns_oper2_int_to_float
-	jsr	__uns_oper2_int_to_long
-	jsr	__uns_oper2_long_to_float
-	jsr	__unscale_oper1_ptr3
-	jsr	__xchg_oper1_int_and_oper2_int
-	jsr	__xor_long
-	jsr	__zero_or_one_char
-	jsr	__zero_or_one_int
-	jsr	__zero_or_one_long
-	jsr	___add_float
-	jsr	___cmp_float
-	jsr	___div_float
-	jsr	___float_to_long
-	jsr	___long_to_float
-	jsr	___mult_float
-	jsr	__add_float
-	jsr	__cmp_float_interface
-	jsr	__div_float
-	jsr	__float_to_long_interface
-	jsr	__long_to_float_interface
-	jsr	__mult_float
-	jsr	__sub_float
-	jsr	___fraction_table
-	jsr	___power_table
 
 
 runtime_program:	.section
