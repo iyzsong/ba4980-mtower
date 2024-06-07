@@ -2,6 +2,7 @@
 @set LIB=.\os\lib
 @set INCLUDE=.\os\inc
 
+x6502 rt.asm
 c6502 -C -d             main.c
 c6502 -C -d -aa_dwnhead dwnhead.c
 c6502 -C -d -aa_game    game.c
