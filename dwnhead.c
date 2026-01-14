@@ -1,15 +1,15 @@
-#include "filetype.h"
+#include "inc\filetype.h"
 
-extern U16 app;
+extern U16 GameTanShiShe;
 const TypeDownAppHead dwnhead = {
     {
         FT_GAME,
         DICT_VER_A4980,
-        "T_T",
+        "Ä§    Ëþ",
         STR_CORP_NAME,
         TRUE,
         ""
     },
-    app,
-    0xc000,
+    GameTanShiShe,
+    0x10000,
 };

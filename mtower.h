@@ -1,0 +1,23 @@
+FAR U8 GameTanShiShe();
+FAR void	GameMTGetInput();
+FAR void	GameMTRefresh();
+FAR void	GameMTTalk(U8 line,U16 number,U8	flag);
+FAR void	GameMTMove();
+FAR void GameMTPrintNum(U8 flag,U32 number,U8 x,U8 y);
+FAR U8	GameMTBattle(U8	number);
+FAR void GameMTOpenDoor();
+FAR void GameMTNewFloor();
+FAR void GameMTEndFace();
+FAR void GameMTChaFloor();
+FAR void GameMTCheckMon();
+FAR void GameMTListMon(U8 scoll);
+FAR U32	GameMTCountLose(U8 monster);
+FAR	void GameMTShop(U8 kind);
+FAR void GameMTReNewR();
+FAR void GameMTGetTalk(U16 number,U8	*chars);
+FAR void GameMTGetMapData();
+FAR void	GameMTEvent();
+FAR void GameMTMainMenu();
+FAR void GameMTEnd();
+
+void	GameMTInit();

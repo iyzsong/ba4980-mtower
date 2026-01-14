@@ -1,4 +1,32 @@
-rule make
-  command = wine make.bat
+cflags = -C -d
 
-build test.gam: make main.c dwnhead.c main.cfg
+rule c6502
+  command = wine eval.bat c6502 $cflags $in
+
+rule x6502
+  command = wine eval.bat x6502 $in
+
+rule link
+  command = wine eval.bat link main.cfg && mv a.gam $out
+
+build 魔塔.gam: link main.cfg rt.obj dwnhead.obj psnake.obj psnakedata.obj psnakefar.obj psnakefar2.obj psnakefar3.obj
+
+build rt.obj: x6502 rt.asm
+
+build dwnhead.obj: c6502 dwnhead.c
+  cflags = -C -d -aa_dwnhead
+
+build psnake.obj: c6502 psnake.c
+  cflags = -C -d -aa_psnake
+
+build psnakedata.obj: c6502 psnakedata.c
+  cflags = -C -d -aa_psdata
+
+build psnakefar.obj: c6502 psnakefar.c
+  cflags = -C -d -aa_psfar
+
+build psnakefar2.obj: c6502 psnakefar2.c
+  cflags = -C -d -aa_psfar2
+
+build psnakefar3.obj: c6502 psnakefar3.c
+  cflags = -C -d -aa_psfar3

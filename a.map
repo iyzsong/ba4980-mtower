@@ -1,0 +1,605 @@
+Assembler Listing Relocated : dwnhead.lst
+Assembler Listing Relocated : psnake.lst
+Assembler Listing Relocated : psnakedata.lst
+Assembler Listing Relocated : psnakefar.lst
+Assembler Listing Relocated : psnakefar2.lst
+Assembler Listing Relocated : psnakefar3.lst
+
+
+Filename : rt.obj
+
+&ALM_ISR_routine                 0000E785
+&AppEnvInit                      0000E95F
+&AppPowerOffHelper               0000E977
+&atoi                            0000E703
+&atol                            0000E706
+&BRK_ISR_routine                 0000E74F
+&BuzzerSelfCheck                 0000E8A7
+&ChangCpuFreqTo16M               0000E7A9
+&ChangCpuFreqTo4M                0000E7AF
+&ChangCpuFreqTo8M                0000E7AC
+&CloseAlarm                      0000E898
+&CloseCursor                     0000E86E
+&CT_ISR_routine                  0000E782
+&Cursor                          0000E743
+&CursorInit                      0000E863
+&DirectReadData                  0000E7D3
+&DirectReadData_start            0000E749
+&DirectWriteData                 0000E7D6
+&FIFO_ISR_routine                0000E773
+&FileBackupFlash                 0000EA13
+&FileChangeCardInf               0000E9FE
+&FileChangeInf                   0000E9E3
+&FileClearChip                   0000EA0A
+&FileClearDataChip               0000E9CB
+&FileClearIndexChip              0000E9E6
+&FileClose                       0000E9D1
+&FileCreat                       0000E9C8
+&FileDel                         0000E9DD
+&FileFindFirst                   0000EA1C
+&FileFindNext                    0000EA16
+&FileFlashStartAdr               0000EA01
+&FileFreeSector                  0000E9E0
+&FileGetPhyAdr                   0000EA04
+&FileNum                         0000E9E9
+&FileOpen                        0000E9CE
+&FileRead                        0000E9D7
+&FileRepairFlash                 0000EA10
+&FileRestoreFlash                0000EA19
+&FileSearch                      0000E9EC
+&FileSearchInf                   0000E9F8
+&FileSectorUnite                 0000E9FB
+&FileSeek                        0000E9EF
+&FileTell                        0000E9DA
+&FileUpdata_Begin                0000E9F2
+&FileUpdata_End                  0000E9F5
+&FileWrite                       0000E9D4
+&fillmem                         0000E700
+&FlashCapacity                   0000E9BF
+&FlashCheckSum                   0000EA1F
+&FlashInit                       0000E9C2
+&fun_fls_clearLog                0000EA0D
+&gdmtest                         0000EA22
+&GetAutoPowerOffTimeOut          0000E89E
+&GTH_ISR_routine                 0000E77C
+&GTL_ISR_routine                 0000E779
+&GuiDownAppHelp                  0000E980
+&GuiEnterPswCheck                0000E9A7
+&GuiGetCurHelpId                 0000E9A4
+&GuiGetKbdState                  0000E965
+&GuiGetMsg                       0000E935
+&GuiHelp                         0000E96B
+&GuiHwSelfCheck                  0000E97D
+&GuiInit                         0000E932
+&GuiInitAppOnReset               0000E989
+&GuiKeyEmuInit                   0000E962
+&GuiLeavePswCheck                0000E9AA
+&GuiLoadDownApp                  0000E998
+&GuiMenu                         0000E94D
+&GuiMsgBox                       0000E953
+&GuiMsgBoxHelper                 0000E96E
+&GuiMsgQueInit                   0000E929
+&GuiPushMsg                      0000E92F
+&GuiQueryBox                     0000E950
+&GuiSendMsg                      0000E92C
+&GuiSetCurHelpId                 0000E9A1
+&GuiSetDefaultHeirApp            0000E98C
+&GuiSetInputFilter               0000E938
+&GuiSetKbdState                  0000E968
+&GuiSetKbdType                   0000E93B
+&GuiSetKjDisp                    0000E974
+&GuiSingleSelBox                 0000E956
+&GuiStartDownApp                 0000E995
+&GuiStudyAbhsReciteAwake         0000E986
+&GuiStudyEveryDayRecite          0000E983
+&GuiSwitchApp                    0000E941
+&GuiTimeDayIntRefresh            0000E97A
+&GuiTimeDjsMsg                   0000E98F
+&GuiTimeJnrMsg                   0000E992
+&GuiTranslateMsg                 0000E93E
+&GuiWanNianLi                    0000E971
+&itoa                            0000E709
+&LcdIcon                         0000E7FD
+&LCDInit                         0000E73A
+&LCDPowerOff                     0000E73D
+&LCDPowerOn                      0000E740
+&LowBatteryDetection             0000E7A6
+&ltoa                            0000E70F
+&main                            0000E737
+&MMC_CMD_ISR_routine             0000E761
+&MMC_DIN_ISR_routine             0000E76A
+&MMC_DOUT_ISR_routine            0000E767
+&MMC_RSP_ISR_routine             0000E764
+&MoveCursor                      0000E871
+&movmem                          0000E70C
+&MT_ISR_routine                  0000E77F
+&NMI_ISR_routine                 0000E74C
+&OpenAlarm                       0000E895
+&OpenCursor                      0000E866
+&OpenCursorInit                  0000E86B
+&Pause                           0000E9B0
+&PI_ISR_routine                  0000E752
+&ResetFlash                      0000E9C5
+&RXD_ISR_routine                 0000E770
+&SetAutoPowerOffTimeOut          0000E89B
+&SetStop                         0000E79D
+&ST1_ISR_routine                 0000E755
+&ST2_ISR_routine                 0000E758
+&ST3_ISR_routine                 0000E75B
+&ST4_ISR_routine                 0000E75E
+&strcat                          0000E712
+&strchr                          0000E715
+&strcmp                          0000E718
+&strcpy                          0000E71B
+&strlen                          0000E71E
+&strncat                         0000E724
+&strncmp                         0000E727
+&strncpy                         0000E72D
+&strpos                          0000E721
+&strrpos                         0000E72A
+&SysAscii                        0000E7BB
+&SysAscii12                      0000E883
+&SysCalcScrBufSize               0000E874
+&SysChinese                      0000E7BE
+&SysChinese12                    0000E880
+&SysChnInput                     0000E919
+&SysChnInputClose                0000E916
+&SysChnInputInit                 0000E91C
+&SysChnInputOpen                 0000E913
+&SysCircle                       0000E788
+&SysCircleClear                  0000E8BC
+&SysClearKeyBuffer               0000E7D0
+&SysCloseCom                     0000E8D4
+&SysClrPA0                       0000E892
+&SysCursorReadParam              0000E8E9
+&SysCursorWriteParam             0000E8F5
+&SysFileGetLogAdr                0000EA07
+&SysFillCircle                   0000E78B
+&SysFillRect                     0000E87D
+&SysGetDate                      0000E99E
+&SysGetDay                       0000E7E2
+&SysGetDownAppStartAddr          0000E8AD
+&SysGetHour                      0000E7DF
+&SysGetKey                       0000E7C1
+&SysGetKeySound                  0000E7C7
+&SysGetMinute                    0000E7DC
+&SysGetSecond                    0000E7D9
+&SysGetTime                      0000E7F4
+&SysGetTimer1Number              0000E7B8
+&SysGetVer                       0000E99B
+&SysGetVolume                    0000E7CD
+&SysHalt                         0000E7A0
+&SysHorizontalLine               0000E8B6
+&SysIconAllClear                 0000E8EC
+&SysIconAllRestore               0000E8F2
+&SysIconAllSave                  0000E8EF
+&SysIconBattery                  0000E80C
+&SysIconBell                     0000E854
+&SysIconCaps                     0000E848
+&SysIconDot1                     0000E824
+&SysIconDot2                     0000E827
+&SysIconDot3                     0000E82A
+&SysIconDoubleDot                0000E8B3
+&SysIconDownArrow                0000E809
+&SysIconF1                       0000E82D
+&SysIconF2                       0000E830
+&SysIconF3                       0000E833
+&SysIconF4                       0000E836
+&SysIconF5                       0000E839
+&SysIconF6                       0000E83C
+&SysIconF7                       0000E83F
+&SysIconF8                       0000E842
+&SysIconKey                      0000E857
+&SysIconLeftArrow                0000E800
+&SysIconNum                      0000E8D7
+&SysIconNumber1                  0000E818
+&SysIconNumber2                  0000E81B
+&SysIconNumber3                  0000E81E
+&SysIconNumber4                  0000E821
+&SysIconNumClear                 0000E8E0
+&SysIconRightArrow               0000E803
+&SysIconRing                     0000E84B
+&SysIconRingClock                0000E84E
+&SysIconScrollBar                0000E80F
+&SysIconScrollBarDownArrow       0000E812
+&SysIconScrollBarUpArrow         0000E815
+&SysIconSetLeftScrollBar         0000E8E3
+&SysIconSetRightScrollBar        0000E8E6
+&SysIconShift                    0000E845
+&SysIconSpeaker                  0000E851
+&SysIconUpArrow                  0000E806
+&SysItalic                       0000E8C2
+&SysLCDClear                     0000E7F7
+&SysLCDFill                      0000E8DD
+&SysLcdPartClear                 0000E85D
+&SysLcdReverse                   0000E860
+&SysLcdSelfTest                  0000E8DA
+&SysLCDVoltage                   0000E8C8
+&SysLcd_Init                     0000E8B0
+&SysLine                         0000E794
+&SysLineClear                    0000E8B9
+&SysMemAllocate                  0000E947
+&SysMemFree                      0000E94A
+&SysMemInit                      0000E944
+&SysOpenCom                      0000E8D1
+&SysPartPicture                  0000E8C5
+&SysPicture                      0000E78E
+&SysPictureDummy                 0000E889
+&SysPictureFill                  0000E791
+&SysPlayMelody                   0000E8A1
+&SysPrintNum                     0000E9AD
+&SysPrintString                  0000E79A
+&SysPrintString12                0000E886
+&SysPutPicture                   0000E85A
+&SysPutPixel                     0000E7FA
+&SysRand                         0000E959
+&SysRect                         0000E797
+&SysRectClear                    0000E8BF
+&SysRestoreScreen                0000E87A
+&SysRestoreScreenEx              0000E8CE
+&SysSaveScreen                   0000E877
+&SysSaveScreenEx                 0000E8CB
+&SysSetDay                       0000E7EE
+&SysSetDownAppStartAddr          0000E8AA
+&SysSetHour                      0000E7EB
+&SysSetKeySound                  0000E7C4
+&SysSetMinute                    0000E7E8
+&SysSetPA0                       0000E88F
+&SysSetSecond                    0000E7E5
+&SysSetTime                      0000E7F1
+&SysSetVolume                    0000E7CA
+&SysSleep                        0000E7A3
+&SysSrand                        0000E95C
+&SysStart                        0000E746
+&SysStopMelody                   0000E8A4
+&SysSymInput                     0000E925
+&SysSymInputClose                0000E922
+&SysSymInputOpen                 0000E91F
+&SysTimer1Close                  0000E7B5
+&SysTimer1Open                   0000E7B2
+&SysYinBiao                      0000E88C
+&TRACEL                          0000E9B3
+&TRACELP                         0000E9B6
+&TraceNum                        0000E9B9
+&TraceNumP                       0000E9BC
+&TXD_ISR_routine                 0000E76D
+&UART_ERR_ISR_routine            0000E776
+&uitoa                           0000E730
+&ultoa                           0000E733
+CAL_NPAGE_LENGTH                 000000A0
+CAL_NPAGE_START                  00002300
+CAL_PAGE0_LENGTH                 00000000
+CAL_PAGE0_START                  0000009E
+CARD_NPAGE_LENGTH                00000100
+DICT_NPAGE_LENGTH                00000000
+DICT_NPAGE_START                 00002300
+DICT_PAGE0_LENGTH                00000000
+DICT_PAGE0_START                 0000009E
+_DataBankSwitch                  0000E907
+_GetDataBankNumber               0000E90A
+_get_current_bank_number         0000E8F8
+_restore_bank_number             0000E8FE
+_switch_bank_number              0000E8FB
+_SysMemcmp                       0000E904
+_SysMemcpy                       0000E901
+_SysReadCom                      0000E910
+_SysWriteCom                     0000E90D
+__addr_reg                       00000026
+__add_float                      0000E517
+__add_long                       0000D29D
+__and_long                       0000D2CA
+__banked_function_call           0000D2F6
+__cmp_float                      0000D31A
+__cmp_float_interface            0000E51C
+__cmp_int                        0000D340
+__cmp_long                       0000D362
+__div_char                       0000D39B
+__div_float                      0000E520
+__div_int                        0000D3EF
+__div_long                       0000D435
+__exts_oper1_char_to_float       0000D498
+__exts_oper1_char_to_int         0000D49E
+__exts_oper1_char_to_long        0000D4A9
+__exts_oper1_int_to_float        0000D4C0
+__exts_oper1_int_to_long         0000D4C6
+__exts_oper1_long_to_float       0000D4E1
+__exts_oper2_char_to_float       0000D506
+__exts_oper2_char_to_int         0000D50C
+__exts_oper2_char_to_long        0000D519
+__exts_oper2_int_to_float        0000D534
+__exts_oper2_int_to_long         0000D53A
+__exts_oper2_long_to_float       0000D557
+__float_to_long_interface        0000E524
+__FUNCTION_RET_ADDR              00000000
+__indirect_call                  0000D572
+__ld_oper1_conversion_store_addr†Õ0000D586
+__ld_oper1_temp_store_addr       0000D596
+__ld_oper2_conversion_store_addr¦Õ0000D5A6
+__ld_oper2_temp_store_addr       0000D5B6
+__lib_temp_ptr                   0000002A
+__long_to_float_interface        0000E528
+__mod_char                       0000D5C6
+__mod_int                        0000D5DC
+__mod_long                       0000D604
+__mult_char                      0000D65B
+__mult_float                     0000E52C
+__mult_int                       0000D6AF
+__mult_long                      0000D6F5
+__neg_as_long                    0000D752
+__neg_float                      0000D780
+__neg_int                        0000D7A6
+__neg_long                       0000D7B4
+__neg_oper2_int                  0000D7E1
+__not_long                       0000D7F1
+__oper1                          00000020
+__OPER1_CONVERSION_STORE         00000018
+__oper1_float_to_char            0000D81D
+__oper1_float_to_int             0000D825
+__oper1_float_to_long            0000D835
+__oper1_high8                    00000022
+__oper1_long_to_char             0000D85A
+__oper1_long_to_int              0000D85F
+__OPER1_TEMP_STORE               00000008
+__oper2                          00000023
+__OPER2_CONVERSION_STORE         00000020
+__oper2_float_to_char            0000D86C
+__oper2_float_to_int             0000D878
+__oper2_float_to_long            0000D88A
+__oper2_high8                    00000025
+__oper2_long_to_char             0000D8A5
+__oper2_long_to_int              0000D8AE
+__OPER2_TEMP_STORE               00000010
+__or_long                        0000D8BD
+__scale_oper1_ptr3               0000D9DF
+__scale_oper2_ptr3               0000D9F3
+__sl_char                        0000DA09
+__sl_int                         0000DA1A
+__sl_long                        0000DA3D
+__stack_ptr                      00000028
+__store_char_funct_arg           0000DAAA
+__store_float                    0000DAC1
+__store_float_funct_arg          0000DAC4
+__store_float_oper2_indirect     0000DAC7
+__store_int_funct_arg            0000DACA
+__store_long                     0000DAE6
+__store_long_funct_arg           0000DAFC
+__store_long_oper2_indirect      0000DB19
+__sub_float                      0000E530
+__sub_long                       0000DB2F
+__switch_comparison              0000DB5C
+__s_sr_char                      0000D8E9
+__s_sr_int                       0000D90B
+__s_sr_long                      0000D93F
+__temp_a_reg                     0000002C
+__unscale_oper1_ptr3             0000DD8F
+__uns_div_char                   0000DC7B
+__uns_div_int                    0000DC80
+__uns_div_long                   0000DC83
+__uns_mod_char                   0000DCAB
+__uns_mod_int                    0000DCB1
+__uns_mod_long                   0000DCC8
+__uns_mult_char                  0000DCEF
+__uns_mult_int                   0000DCF4
+__uns_mult_long                  0000DCF7
+__uns_oper1_char_to_float        0000DD19
+__uns_oper1_char_to_long         0000DD1F
+__uns_oper1_int_to_float         0000DD32
+__uns_oper1_int_to_long          0000DD38
+__uns_oper1_long_to_float        0000DD4F
+__uns_oper2_char_to_float        0000DD52
+__uns_oper2_char_to_long         0000DD58
+__uns_oper2_int_to_float         0000DD6F
+__uns_oper2_int_to_long          0000DD75
+__uns_oper2_long_to_float        0000DD8C
+__u_sr_char                      0000DBE1
+__u_sr_int                       0000DBF2
+__u_sr_long                      0000DC0E
+__xchg_oper1_int_and_oper2_int   0000DDA7
+__xor_long                       0000DDB8
+__zero_or_one_char               0000DDE4
+__zero_or_one_int                0000DDEE
+__zero_or_one_long               0000DE02
+___add_float                     0000DE29
+___cmp_float                     0000E039
+___div_char                      0000D000
+___div_float                     0000E100
+___div_int                       0000D032
+___div_long                      0000D0A8
+___float_to_long                 0000E282
+___long_to_float                 0000E31D
+___mult_char                     0000D184
+___mult_float                    0000E3B7
+___mult_int                      0000D1A2
+___mult_long                     0000D201
+
+
+
+Filename : dwnhead.obj
+
+_dwnhead                         00E05000
+
+
+
+Filename : psnake.obj
+
+&GameMTBattle                    00009012
+&GameMTEndFace                   0000901B
+&GameMTGetInput                  00009003
+&GameMTMove                      0000900C
+&GameMTNewFloor                  00009018
+&GameMTOpenDoor                  00009015
+&GameMTPrintNum                  0000900F
+&GameMTRefresh                   00009006
+&GameMTTalk                      00009009
+&GameTanShiShe                   00009000
+_GameMTBattle                    00E06C58
+_GameMTEndFace                   00E08A56
+_GameMTGetInput                  00E0513A
+_GameMTInit                      00E05C29
+_GameMTMove                      00E062BD
+_GameMTNewFloor                  00E087C2
+_GameMTOpenDoor                  00E08273
+_GameMTPrintNum                  00E063C0
+_GameMTRefresh                   00E052FF
+_GameMTTalk                      00E055AA
+_GameTanShiShe                   00E05046
+_g_GameMTBuf                     00001813
+_g_GameMTCheck                   00001F96
+_g_GameMTCurMap                  00001FA8
+_g_GameMTCurTime                 0000180A
+_g_GameMTDeadLine                00001801
+_g_GameMTEnd                     00001802
+_g_GameMTFloor                   00001FA7
+_g_GameMTGameOver                00001803
+_g_GameMTHeroDamige              00001F9E
+_g_GameMTHeroDefence             00001FA0
+_g_GameMTHeroDir                 00001FA6
+_g_GameMTHeroExp                 00001FA4
+_g_GameMTHeroLife                00001FAA
+_g_GameMTHeroLv                  00001809
+_g_GameMTHeroMoney               00001FA2
+_g_GameMTHeroX                   0000180F
+_g_GameMTHeroY                   00001810
+_g_GameMTInit                    00001804
+_g_GameMTJuidgeNow               00001FAE
+_g_GameMTJuidgeX                 00001811
+_g_GameMTJuidgeY                 00001812
+_g_GameMTKBState                 0000180B
+_g_GameMTKey                     00001F93
+_g_GameMTMapX                    0000180D
+_g_GameMTMapY                    0000180E
+_g_GameMTNearEnd                 00001800
+_g_GameMTQuit                    00001805
+_g_GameMTReadKey                 00001806
+_g_GameMTTimeOut                 00001807
+_g_GameMTTopFloor                00001808
+
+
+
+Filename : psnakedata.obj
+
+_GameMTBattlePad                 0000AE58
+_GameMTCeng                      0000AD58
+_GameMTChar                      0000B210
+_GameMTDi                        0000AD4F
+_GameMTEagle                     0000CE61
+_GameMTHappyEnd                  0000CB61
+_GameMTHelpData                  0000903F
+_GameMTHeroPic                   0000909E
+_GameMTLiKai                     0000AD61
+_GameMTMainFace                  0000C3E1
+_GameMTMonData                   0000B2CC
+_GameMTMonName                   0000BF09
+_GameMTNotice                    0000B2C4
+_GameMTNum35                     0000AE26
+_GameMTNum39                     0000ADCC
+_GameMTNum78                     0000AD7C
+_GameMTStartPoint                0000BD16
+_GameMTTalkData                  00009254
+_GameMTTalkDown                  000091D7
+_GameMTTalkSide                  00009210
+_GameMTTalkSigh                  00009220
+_GameMTTalkUp                    0000919E
+_GameMTUnitPic                   0000B416
+_GameMTUnknown                   0000BEEE
+_GameMTVictory                   0000AD34
+_GameMTWorkPad                   0000BD6E
+
+
+
+Filename : psnakefar.obj
+
+&GameMTChaFloor                  0000901E
+&GameMTCheckMon                  00009021
+&GameMTCountLose                 00009027
+&GameMTListMon                   00009024
+&GameMTReNewR                    0000902D
+&GameMTShop                      0000902A
+_GameMTChaFloor                  00E15000
+_GameMTCheckMon                  00E15769
+_GameMTCountLose                 00E16C57
+_GameMTListMon                   00E161D5
+_GameMTReNewR                    00E186D4
+_GameMTShop                      00E16F58
+
+
+
+Filename : psnakefar2.obj
+
+&GameMTGetMapData                00009033
+&GameMTGetTalk                   00009030
+_GameMTGetMapData                00E272CD
+_GameMTGetTalk                   00E25000
+
+
+
+Filename : psnakefar3.obj
+
+&GameMTEnd                       0000903C
+&GameMTEvent                     00009036
+&GameMTMainMenu                  00009039
+_GameMTEnd                       00E38A23
+_GameMTEvent                     00E35000
+_GameMTMainMenu                  00E383EB
+
+
+******************************************************************************
+*                      S E C T I O N      S U M M A R Y                      *
+******************************************************************************
+*    Section Name                  Start      End         Description        *
+******************************************************************************
+* bank_table                      00009000  0000903E                         *
+* const_data_dwnhead              00E05000  00E05045                         *
+* const_data_psdata               0000903F  0000CE6C                         *
+* const_data_psfar                00E18D93  00E18E8A                         *
+* const_data_psfar2               00E273E2  00E28C07                         *
+* const_data_psfar3               00E38CAA  00E38E88                         *
+* const_data_psnake               00E08CF7  00E08DA8                         *
+* program_psfar                   00E15000  00E18D92                         *
+* program_psfar2                  00E25000  00E273E1                         *
+* program_psfar3                  00E35000  00E38CA9                         *
+* program_psnake                  00E05046  00E08CF6                         *
+* uninit_data_psnake              00001800  00001FAF                         *
+******************************************************************************
+
+
+******************************************************************************
+*                             L O A D      M A P                             *
+******************************************************************************
+*    Section Name              Starting Address    Ending Address    Size    *
+******************************************************************************
+* rt.obj                                                                     *
+* dwnhead.obj                                                                *
+*    const_data_dwnhead            00000000           00000045     00000046  *
+* psnake.obj                                                                 *
+*   -uninit_data_psnake            00001800           00001FAF     000007B0  *
+*    program_psnake                00000046           00003CF6     00003CB1  *
+*    const_data_psnake             00003CF7           00003DA8     000000B2  *
+*    bank_table                    00010000           0001001D     0000001E  *
+* psnakedata.obj                                                             *
+*    const_data_psdata             0001003F           00013E6C     00003E2E  *
+* psnakefar.obj                                                              *
+*    program_psfar                 00004000           00007D92     00003D93  *
+*    const_data_psfar              00007D93           00007E8A     000000F8  *
+*    bank_table                    0001001E           0001002F     00000012  *
+* psnakefar2.obj                                                             *
+*    program_psfar2                00008000           0000A3E1     000023E2  *
+*    const_data_psfar2             0000A3E2           0000BC07     00001826  *
+*    bank_table                    00010030           00010035     00000006  *
+* psnakefar3.obj                                                             *
+*    program_psfar3                0000C000           0000FCA9     00003CAA  *
+*    const_data_psfar3             0000FCAA           0000FE88     000001DF  *
+*    bank_table                    00010036           0001003E     00000009  *
+******************************************************************************
+
+
+                  Linker Output Filename : a.gam
+                  Disk Listing  Filename : a.map
+                  Debug Control Filename : a.dcf
+                  Symbol Table  Filename : a.sym
+                                Format   : 2500 A.D. High Level
+
+
+         Link Errors :  0             Output Format :  Executable
+
+

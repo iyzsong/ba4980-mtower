@@ -1,12 +1,5 @@
 .ninja_log
-test.dcf
-test.gam
-test.map
-test.sym
-test.tsk
-dwnhead.obj
-dwnhead.lst
-game.obj
-game.lst
-main.obj
-main.lst
+*.obj
+*.gam
+*.sym
+*.dcf

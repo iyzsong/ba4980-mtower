@@ -1,0 +1,376 @@
+  Wed Jan 14 21:56:26 2026                                                                                               Page    1
+
+
+
+
+
+
+
+               2500 A.D. 6502 Macro Assembler  -  Version 5.02b
+               ------------------------------------------------
+
+                       Input  Filename : dwnhead.asm
+                       Output Filename : dwnhead.obj
+                       Listing Has Been Relocated                               
+
+
+    1                     	program_dwnhead:	.section
+    2                     	const_data_dwnhead:	.section
+    3                     	init_data_dwnhead:	.section
+    4                     	uninit_data_dwnhead:	.section
+    5                     	bank_table:	.section
+    6                     	bank_table:	.section
+    7                     			.program_dwnhead
+    8  00000000             			.filetype	C
+    9                     			.symbols
+   10                     			.llchar		?
+   11                     			.longchk	off
+   12                     			.extern	page0	__oper1
+   13                     			.extern	page0	__oper1_high8
+   14                     			.extern	page0	__oper2
+   15                     			.extern	page0	__oper2_high8
+   16                     			.extern	page0	__addr_reg
+   17                     			.extern	page0	__stack_ptr
+   18                     			.extern	page0	__lib_temp_ptr
+   19                     	;.filename dwnhead.c
+   20                     	;
+   21                     			.filename	dwnhead.c
+   22                     	;.filename .\os\inc\filetype.h
+   23                     	;
+   24                     			.filename	.\os\inc\filetype.h
+   25                     	;.filename .\os\inc\dictsys.h
+   26                     	;
+   27                     			.filename	.\os\inc\dictsys.h
+   28                     	;.filename .\os\inc\keytable.h
+   29                     	;
+   30                     			.filename	.\os\inc\keytable.h
+   31                     	;.endinc .\os\inc\dictsys.h
+   32                     			.filename	.\os\inc\dictsys.h
+   33                     	;struct tagMsgType {
+   34                     	;	
+   35                     			.strname  _tagMsgType
+   36                     	;unsigned char 		type;
+   37                     	;	
+   38                     			.strdef	_type,73,v,c,u,0,g,d,d,d,d,00h
+   39                     	;unsigned int 		param;
+   40                     	;
+   41                     			.strdef	_param,74,v,i,u,1,g,d,d,d,d,00h
+   42                     	;}
+   43                     			.strend	_tagMsgType,3,2
+   44                     	;struct tagMsgByteType {
+   45                     	;	
+   46                     			.strname  _tagMsgByteType
+  Wed Jan 14 21:56:26 2026                                                                                               Page    2
+
+
+
+
+   47                     	;unsigned char 		type;
+   48                     	;	
+   49                     			.strdef	_type,78,v,c,u,0,g,d,d,d,d,00h
+   50                     	;unsigned char 		prmLow;
+   51                     	;	
+   52                     			.strdef	_prmLow,79,v,c,u,1,g,d,d,d,d,00h
+   53                     	;unsigned char 		prmHi;
+   54                     	;
+   55                     			.strdef	_prmHi,80,v,c,u,2,g,d,d,d,d,00h
+   56                     	;}
+   57                     			.strend	_tagMsgByteType,3,3
+   58                     	;struct tagDate {
+   59                     	;	
+   60                     			.strname  _tagDate
+   61                     	;unsigned char 	day;
+   62                     	;	
+   63                     			.strdef	_day,115,v,c,u,0,g,d,d,d,d,00h
+   64                     	;unsigned char 	month;
+   65                     	;	
+   66                     			.strdef	_month,116,v,c,u,1,g,d,d,d,d,00h
+   67                     	;unsigned char 	year;
+   68                     	;	
+   69                     			.strdef	_year,117,v,c,u,2,g,d,d,d,d,00h
+   70                     	;unsigned char 	wday;				
+   71                     	;
+   72                     			.strdef	_wday,118,v,c,u,3,g,d,d,d,d,00h
+   73                     	;}
+   74                     			.strend	_tagDate,4,4
+   75                     	;struct tagTime {
+   76                     	;	
+   77                     			.strname  _tagTime
+   78                     	;unsigned char 	second;
+   79                     	;	
+   80                     			.strdef	_second,123,v,c,u,0,g,d,d,d,d,00h
+   81                     	;unsigned char 	minute;
+   82                     	;	
+   83                     			.strdef	_minute,124,v,c,u,1,g,d,d,d,d,00h
+   84                     	;unsigned char 	hour;
+   85                     	;
+   86                     			.strdef	_hour,125,v,c,u,2,g,d,d,d,d,00h
+   87                     	;}
+   88                     			.strend	_tagTime,3,3
+   89                     	;struct tagGuiMenuItemType {
+   90                     	;	
+   91                     			.strname  _tagGuiMenuItemType
+   92                     	;unsigned char 		strLen;				
+   93                     	;	
+   94                     			.strdef	_strLen,143,v,c,u,0,g,d,d,d,d,00h
+   95                     	;unsigned char 		*str;				
+   96                     	;	
+   97                     			.strdef	_str,144,v,pc1,u,1,g,d,d,d,d,00h
+   98                     	;unsigned char 		*bmpData0;			
+   99                     	;	
+  100                     			.strdef	_bmpData0,145,v,pc1,u,3,g,d,d,d,d,00h
+  101                     	;unsigned char 		*bmpData1;			
+  102                     	;
+  103                     			.strdef	_bmpData1,146,v,pc1,u,5,g,d,d,d,d,00h
+  Wed Jan 14 21:56:26 2026                                                                                               Page    3
+
+
+
+
+  104                     	;}
+  105                     			.strend	_tagGuiMenuItemType,7,4
+  106                     	;struct tagGuiMenu {
+  107                     	;	
+  108                     			.strname  _tagGuiMenu
+  109                     	;unsigned char 					itemNum;			
+  110                     	;	
+  111                     			.strdef	_itemNum,151,v,c,u,0,g,d,d,d,d,00h
+  112                     	;unsigned char 					colNum;				
+  113                     	;	
+  114                     			.strdef	_colNum,152,v,c,u,1,g,d,d,d,d,00h
+  115                     	;unsigned char 					*colPos;			
+  116                     	;	
+  117                     			.strdef	_colPos,153,v,pc1,u,2,g,d,d,d,d,00h
+  118                     	;unsigned char 					style;				
+  119                     	;	
+  120                     			.strdef	_style,154,v,c,u,4,g,d,d,d,d,00h
+  121                     	;struct tagGuiMenuItemType *	*menuItems ;		
+  122                     	;
+  123                     			.strdef	_menuItems,155,v,ps2,_tagGuiMenuItemType,s,5,g,d,d,d,d,00h
+  124                     	;}
+  125                     			.strend	_tagGuiMenu,7,5
+  126                     	;struct tagMenuEnv {
+  127                     	;	
+  128                     			.strname  _tagMenuEnv
+  129                     	;unsigned char 		x0;					
+  130                     	;	
+  131                     			.strdef	_x0,160,v,c,u,0,g,d,d,d,d,00h
+  132                     	;unsigned char 		x1;
+  133                     	;	
+  134                     			.strdef	_x1,161,v,c,u,1,g,d,d,d,d,00h
+  135                     	;unsigned char 		y0;
+  136                     	;	
+  137                     			.strdef	_y0,162,v,c,u,2,g,d,d,d,d,00h
+  138                     	;unsigned char 		y1;
+  139                     	;	
+  140                     			.strdef	_y1,163,v,c,u,3,g,d,d,d,d,00h
+  141                     	;unsigned char 		startDispItem;		
+  142                     	;
+  143                     	;
+  144                     	;	
+  145                     			.strdef	_startDispItem,164,v,c,u,4,g,d,d,d,d,00h
+  146                     	;unsigned char 		maxDispItem;		
+  147                     	;	
+  148                     			.strdef	_maxDispItem,167,v,c,u,5,g,d,d,d,d,00h
+  149                     	;unsigned char 		dispItemNum;		
+  150                     	;	
+  151                     			.strdef	_dispItemNum,168,v,c,u,6,g,d,d,d,d,00h
+  152                     	;unsigned char 		nFocus;				
+  153                     	;
+  154                     			.strdef	_nFocus,169,v,c,u,7,g,d,d,d,d,00h
+  155                     	;}
+  156                     			.strend	_tagMenuEnv,8,8
+  157                     	;struct tagRect {
+  158                     	;	
+  159                     			.strname  _tagRect
+  160                     	;unsigned char 		left;					
+  Wed Jan 14 21:56:26 2026                                                                                               Page    4
+
+
+
+
+  161                     	;	
+  162                     			.strdef	_left,174,v,c,u,0,g,d,d,d,d,00h
+  163                     	;unsigned char 		top;					
+  164                     	;	
+  165                     			.strdef	_top,175,v,c,u,1,g,d,d,d,d,00h
+  166                     	;unsigned char 		height;					
+  167                     	;	
+  168                     			.strdef	_height,176,v,c,u,2,g,d,d,d,d,00h
+  169                     	;unsigned char 		width;					
+  170                     	;
+  171                     			.strdef	_width,177,v,c,u,3,g,d,d,d,d,00h
+  172                     	;}
+  173                     			.strend	_tagRect,4,4
+  174                     	;struct tagRandEnv {
+  175                     	;	
+  176                     			.strname  _tagRandEnv
+  177                     	;unsigned long  next 	;
+  178                     	; 	
+  179                     			.strdef	_next,182,v,l,u,0,g,d,d,d,d,00h
+  180                     	;unsigned int  randMax	;
+  181                     	;
+  182                     			.strdef	_randMax,183,v,i,u,4,g,d,d,d,d,00h
+  183                     	;}
+  184                     			.strend	_tagRandEnv,6,2
+  185                     	;struct tagQryBoxBmp {
+  186                     	;	
+  187                     			.strname  _tagQryBoxBmp
+  188                     	;unsigned char 		left;					
+  189                     	;	
+  190                     			.strdef	_left,188,v,c,u,0,g,d,d,d,d,00h
+  191                     	;unsigned char 		top;					
+  192                     	;	
+  193                     			.strdef	_top,189,v,c,u,1,g,d,d,d,d,00h
+  194                     	;unsigned char 		height;					
+  195                     	;	
+  196                     			.strdef	_height,190,v,c,u,2,g,d,d,d,d,00h
+  197                     	;unsigned char 		width;					
+  198                     	;	
+  199                     			.strdef	_width,191,v,c,u,3,g,d,d,d,d,00h
+  200                     	;unsigned char 		*bmpData;				
+  201                     	;
+  202                     			.strdef	_bmpData,192,v,pc1,u,4,g,d,d,d,d,00h
+  203                     	;}
+  204                     			.strend	_tagQryBoxBmp,6,5
+  205                     	;struct tagAppSwitchInfo {
+  206                     	;	
+  207                     			.strname  _tagAppSwitchInfo
+  208                     	;unsigned int 		currentAppID;							
+  209                     	;	
+  210                     			.strdef	_currentAppID,237,v,i,u,0,g,d,d,d,d,00h
+  211                     	;unsigned int 		heirAppID;								
+  212                     	;	
+  213                     			.strdef	_heirAppID,238,v,i,u,2,g,d,d,d,d,00h
+  214                     	;unsigned long 		downAppPhyAddr;							
+  215                     	;	
+  216                     			.strdef	_downAppPhyAddr,239,v,l,u,4,g,d,d,d,d,00h
+  217                     	;unsigned char 		currentAppAttr;							
+  Wed Jan 14 21:56:26 2026                                                                                               Page    5
+
+
+
+
+  218                     	;	
+  219                     			.strdef	_currentAppAttr,240,v,c,u,8,g,d,d,d,d,00h
+  220                     	;unsigned char 		heirAppAttr;
+  221                     	;
+  222                     			.strdef	_heirAppAttr,241,v,c,u,9,g,d,d,d,d,00h
+  223                     	;}
+  224                     			.strend	_tagAppSwitchInfo,10,5
+  225                     	;struct tagSysIconEnv {
+  226                     	;	
+  227                     			.strname  _tagSysIconEnv
+  228                     	;unsigned char 		iconSaveBuf[12];
+  229                     	;
+  230                     			.strdef	_iconSaveBuf,327,v,c,u,0,g,d,d,d,d,0ch,00h
+  231                     	;}
+  232                     			.strend	_tagSysIconEnv,12,1
+  233                     	;.macstart 19335,525
+  234                     	;
+  235                     			.c_start  04b87h,525
+  236                     	;.asm
+  237                     	;	
+  238  00000000             			.CHIP	6502
+  239                     			.LINKLIST
+  240                     			.SYMBOLS
+  241                     			.DEBUG	ASM
+  242                     			.LIST	ON
+  243                     	;.optimize	off
+  244                     	;	
+  245                     	;.endasm
+  246                     	;
+  247                     	;
+  248                     	;.macend 19418,532
+  249                     	;
+  250                     			.c_end	04bdah,532
+  251                     	;.endinc .\os\inc\filetype.h
+  252                     			.filename	.\os\inc\filetype.h
+  253                     	;struct tagSysCommFileHead {
+  254                     	;
+  255                     	;	
+  256                     			.strname  _tagSysCommFileHead
+  257                     	;unsigned char 		strFileType[4];					
+  258                     	;
+  259                     	;	
+  260                     			.strdef	_strFileType,73,v,c,u,0,g,d,d,d,d,04h,00h
+  261                     	;unsigned int 		nVer;							
+  262                     	;
+  263                     	;	
+  264                     			.strdef	_nVer,75,v,i,u,4,g,d,d,d,d,00h
+  265                     	;unsigned char 		strTitle[32];	
+  266                     	;
+  267                     	;	
+  268                     			.strdef	_strTitle,77,v,c,u,6,g,d,d,d,d,020h,00h
+  269                     	;unsigned char 		strCorpName[16];				
+  270                     	;
+  271                     	;	
+  272                     			.strdef	_strCorpName,79,v,c,u,38,g,d,d,d,d,010h,00h
+  273                     	;unsigned char 		executable;						
+  274                     	;
+  Wed Jan 14 21:56:26 2026                                                                                               Page    6
+
+
+
+
+  275                     	;	
+  276                     			.strdef	_executable,81,v,c,u,54,g,d,d,d,d,00h
+  277                     	;unsigned char 		res[9];							
+  278                     	;
+  279                     			.strdef	_res,83,v,c,u,55,g,d,d,d,d,09h,00h
+  280                     	;}
+  281                     			.strend	_tagSysCommFileHead,64,6
+  282                     	;struct DownAppHeadTag 
+  283                     	;{
+  284                     	;
+  285                     	;	
+  286                     			.strname  _DownAppHeadTag
+  287                     	;struct tagSysCommFileHead 		commHead;				
+  288                     	;
+  289                     	;	
+  290                     			.strdef	_commHead,92,s,_tagSysCommFileHead,0,g,d,d,d,d,00h
+  291                     	;unsigned int 						entry;					
+  292                     	;
+  293                     	;	
+  294                     			.strdef	_entry,94,v,i,u,64,g,d,d,d,d,00h
+  295                     	;unsigned long 						dataOffset;				
+  296                     	;
+  297                     			.strdef	_dataOffset,96,v,l,u,66,g,d,d,d,d,00h
+  298                     	;}
+  299                     			.strend	_DownAppHeadTag,70,3
+  300                     	;.endinc dwnhead.c
+  301                     			.filename	dwnhead.c
+  302                     	;
+  303                     			.const_data_dwnhead
+  304  5000                 			.i_align
+  305  5000     47 41 4D 00 	_dwnhead:	.byte	"GAM",0
+  306                     	;
+  307  5004     2000        			.word	00020h
+  308  5006     C4 A7 20 20 20 			.byte	"Ä§    Ëþ",0
+              20 CB FE 00 
+  309  00E0500F             			.blkb	23
+  310                     	;
+  311  5026     42 42 4B 20 4C 			.byte	"BBK LTD.",0
+              54 44 2E 00 
+  312  00E0502F             			.blkb	7
+  313                     	;
+  314  5036     01          			.byte	1
+  315  5037     00          			.byte	"",0
+  316  00E05038             			.blkb	8
+  317                     	;
+  318  5040     4650        			.word	_GameTanShiShe
+  319  5042     0000 0100   			.long	010000h
+  320                     	;
+  321                     			.global	_dwnhead
+  322                     			.attrib	_dwnhead,15,s,_DownAppHeadTag,g,d,c,d,c,00h
+  323                     	
+  324                     			.extern	_GameTanShiShe
+  325                     			.program_dwnhead
+  326                     	
+  327                     			.end
+
+
+             Lines Assembled : 327                  Errors : 0
+
+
+
