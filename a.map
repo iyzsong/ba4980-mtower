@@ -1,3 +1,4 @@
+No 'SYMBOLS' Directive in File : x.obj
 Assembler Listing Relocated : dwnhead.lst
 Assembler Listing Relocated : psnake.lst
 Assembler Listing Relocated : psnakedata.lst
@@ -414,6 +415,11 @@ ___mult_long                     0000D201
 
 
 
+Filename : x.obj
+
+
+
+
 Filename : dwnhead.obj
 
 _dwnhead                         00E05000
@@ -422,16 +428,16 @@ _dwnhead                         00E05000
 
 Filename : psnake.obj
 
-&GameMTBattle                    00009012
-&GameMTEndFace                   0000901B
-&GameMTGetInput                  00009003
-&GameMTMove                      0000900C
-&GameMTNewFloor                  00009018
-&GameMTOpenDoor                  00009015
-&GameMTPrintNum                  0000900F
-&GameMTRefresh                   00009006
-&GameMTTalk                      00009009
-&GameTanShiShe                   00009000
+&GameMTBattle                    0000903C
+&GameMTEndFace                   00009045
+&GameMTGetInput                  0000902D
+&GameMTMove                      00009036
+&GameMTNewFloor                  00009042
+&GameMTOpenDoor                  0000903F
+&GameMTPrintNum                  00009039
+&GameMTRefresh                   00009030
+&GameMTTalk                      00009033
+&GameTanShiShe                   0000902A
 _GameMTBattle                    00E06C58
 _GameMTEndFace                   00E08A56
 _GameMTGetInput                  00E0513A
@@ -478,43 +484,43 @@ _g_GameMTTopFloor                00001808
 
 Filename : psnakedata.obj
 
-_GameMTBattlePad                 0000AE58
-_GameMTCeng                      0000AD58
-_GameMTChar                      0000B210
-_GameMTDi                        0000AD4F
-_GameMTEagle                     0000CE61
-_GameMTHappyEnd                  0000CB61
-_GameMTHelpData                  0000903F
-_GameMTHeroPic                   0000909E
-_GameMTLiKai                     0000AD61
-_GameMTMainFace                  0000C3E1
-_GameMTMonData                   0000B2CC
-_GameMTMonName                   0000BF09
-_GameMTNotice                    0000B2C4
-_GameMTNum35                     0000AE26
-_GameMTNum39                     0000ADCC
-_GameMTNum78                     0000AD7C
-_GameMTStartPoint                0000BD16
-_GameMTTalkData                  00009254
-_GameMTTalkDown                  000091D7
-_GameMTTalkSide                  00009210
-_GameMTTalkSigh                  00009220
-_GameMTTalkUp                    0000919E
-_GameMTUnitPic                   0000B416
-_GameMTUnknown                   0000BEEE
-_GameMTVictory                   0000AD34
-_GameMTWorkPad                   0000BD6E
+_GameMTBattlePad                 0000AE82
+_GameMTCeng                      0000AD82
+_GameMTChar                      0000B23A
+_GameMTDi                        0000AD79
+_GameMTEagle                     0000CE8B
+_GameMTHappyEnd                  0000CB8B
+_GameMTHelpData                  00009069
+_GameMTHeroPic                   000090C8
+_GameMTLiKai                     0000AD8B
+_GameMTMainFace                  0000C40B
+_GameMTMonData                   0000B2F6
+_GameMTMonName                   0000BF33
+_GameMTNotice                    0000B2EE
+_GameMTNum35                     0000AE50
+_GameMTNum39                     0000ADF6
+_GameMTNum78                     0000ADA6
+_GameMTStartPoint                0000BD40
+_GameMTTalkData                  0000927E
+_GameMTTalkDown                  00009201
+_GameMTTalkSide                  0000923A
+_GameMTTalkSigh                  0000924A
+_GameMTTalkUp                    000091C8
+_GameMTUnitPic                   0000B440
+_GameMTUnknown                   0000BF18
+_GameMTVictory                   0000AD5E
+_GameMTWorkPad                   0000BD98
 
 
 
 Filename : psnakefar.obj
 
-&GameMTChaFloor                  0000901E
-&GameMTCheckMon                  00009021
-&GameMTCountLose                 00009027
-&GameMTListMon                   00009024
-&GameMTReNewR                    0000902D
-&GameMTShop                      0000902A
+&GameMTChaFloor                  00009048
+&GameMTCheckMon                  0000904B
+&GameMTCountLose                 00009051
+&GameMTListMon                   0000904E
+&GameMTReNewR                    00009057
+&GameMTShop                      00009054
 _GameMTChaFloor                  00E15000
 _GameMTCheckMon                  00E15769
 _GameMTCountLose                 00E16C57
@@ -526,8 +532,8 @@ _GameMTShop                      00E16F58
 
 Filename : psnakefar2.obj
 
-&GameMTGetMapData                00009033
-&GameMTGetTalk                   00009030
+&GameMTGetMapData                0000905D
+&GameMTGetTalk                   0000905A
 _GameMTGetMapData                00E272CD
 _GameMTGetTalk                   00E25000
 
@@ -535,9 +541,9 @@ _GameMTGetTalk                   00E25000
 
 Filename : psnakefar3.obj
 
-&GameMTEnd                       0000903C
-&GameMTEvent                     00009036
-&GameMTMainMenu                  00009039
+&GameMTEnd                       00009066
+&GameMTEvent                     00009060
+&GameMTMainMenu                  00009063
 _GameMTEnd                       00E38A23
 _GameMTEvent                     00E35000
 _GameMTMainMenu                  00E383EB
@@ -548,9 +554,9 @@ _GameMTMainMenu                  00E383EB
 ******************************************************************************
 *    Section Name                  Start      End         Description        *
 ******************************************************************************
-* bank_table                      00009000  0000903E                         *
+* bank_table                      00009000  00009068                         *
 * const_data_dwnhead              00E05000  00E05045                         *
-* const_data_psdata               0000903F  0000CE6C                         *
+* const_data_psdata               00009069  0000CE96                         *
 * const_data_psfar                00E18D93  00E18E8A                         *
 * const_data_psfar2               00E273E2  00E28C07                         *
 * const_data_psfar3               00E38CAA  00E38E88                         *
@@ -569,27 +575,29 @@ _GameMTMainMenu                  00E383EB
 *    Section Name              Starting Address    Ending Address    Size    *
 ******************************************************************************
 * rt.obj                                                                     *
+* x.obj                                                                      *
+*    bank_table                    00010000           00010029     0000002A  *
 * dwnhead.obj                                                                *
 *    const_data_dwnhead            00000000           00000045     00000046  *
 * psnake.obj                                                                 *
 *   -uninit_data_psnake            00001800           00001FAF     000007B0  *
 *    program_psnake                00000046           00003CF6     00003CB1  *
 *    const_data_psnake             00003CF7           00003DA8     000000B2  *
-*    bank_table                    00010000           0001001D     0000001E  *
+*    bank_table                    0001002A           00010047     0000001E  *
 * psnakedata.obj                                                             *
-*    const_data_psdata             0001003F           00013E6C     00003E2E  *
+*    const_data_psdata             00010069           00013E96     00003E2E  *
 * psnakefar.obj                                                              *
 *    program_psfar                 00004000           00007D92     00003D93  *
 *    const_data_psfar              00007D93           00007E8A     000000F8  *
-*    bank_table                    0001001E           0001002F     00000012  *
+*    bank_table                    00010048           00010059     00000012  *
 * psnakefar2.obj                                                             *
 *    program_psfar2                00008000           0000A3E1     000023E2  *
 *    const_data_psfar2             0000A3E2           0000BC07     00001826  *
-*    bank_table                    00010030           00010035     00000006  *
+*    bank_table                    0001005A           0001005F     00000006  *
 * psnakefar3.obj                                                             *
 *    program_psfar3                0000C000           0000FCA9     00003CAA  *
 *    const_data_psfar3             0000FCAA           0000FE88     000001DF  *
-*    bank_table                    00010036           0001003E     00000009  *
+*    bank_table                    00010060           00010068     00000009  *
 ******************************************************************************
 
 

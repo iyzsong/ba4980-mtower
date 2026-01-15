@@ -9,9 +9,10 @@ rule x6502
 rule link
   command = wine eval.bat link main.cfg && mv a.gam $out
 
-build 魔塔.gam: link main.cfg rt.obj dwnhead.obj psnake.obj psnakedata.obj psnakefar.obj psnakefar2.obj psnakefar3.obj
+build 魔塔.gam: link main.cfg rt.obj x.obj dwnhead.obj psnake.obj psnakedata.obj psnakefar.obj psnakefar2.obj psnakefar3.obj
 
 build rt.obj: x6502 rt.asm
+build x.obj: x6502 x.asm
 
 build dwnhead.obj: c6502 dwnhead.c
   cflags = -C -d -aa_dwnhead

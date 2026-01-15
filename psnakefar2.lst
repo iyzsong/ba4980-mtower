@@ -292,9 +292,9 @@
   256                     			.f_start  057ch,39
   257                     			.bank_table
   258                     			.global	&GameMTGetTalk
-  259  9030     00 50 E2    	&GameMTGetTalk:	.bankaddr	_GameMTGetTalk
+  259  905A     00 50 E2    	&GameMTGetTalk:	.bankaddr	_GameMTGetTalk
   260                     			.ends
-  261         3115 5000   	_GameMTGetTalk:	.equal	$
+  261         4217 5000   	_GameMTGetTalk:	.equal	$
   262                     			.attrib	_GameMTGetTalk,40,f,b
   263                     	;
   264                     	;
@@ -8170,9 +8170,9 @@
  7040                     			.f_start  04414h,306
  7041                     			.bank_table
  7042                     			.global	&GameMTGetMapData
- 7043  9033     CD 72 E2    	&GameMTGetMapData:	.bankaddr	_GameMTGetMapData
+ 7043  905D     CD 72 E2    	&GameMTGetMapData:	.bankaddr	_GameMTGetMapData
  7044                     			.ends
- 7045         3415 72CD   	_GameMTGetMapData:	.equal	$
+ 7045         4517 72CD   	_GameMTGetMapData:	.equal	$
  7046                     			.attrib	_GameMTGetMapData,307,f,b
  7047                     	;
  7048                     	;

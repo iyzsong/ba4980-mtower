@@ -413,9 +413,9 @@
   367                     			.f_start  0aa3h,78
   368                     			.bank_table
   369                     			.global	&GameTanShiShe
-  370  9000     46 50 E0    	&GameTanShiShe:	.bankaddr	_GameTanShiShe
+  370  902A     46 50 E0    	&GameTanShiShe:	.bankaddr	_GameTanShiShe
   371                     			.ends
-  372         3110 5046   	_GameTanShiShe:	.equal	$
+  372         4212 5046   	_GameTanShiShe:	.equal	$
   373                     			.attrib	_GameTanShiShe,79,f,b
   374                     	;
   375                     	;
@@ -614,7 +614,7 @@
   553                     	;GameMTEvent()
   554         3912 512B   	?BOL2:		.equal	$
   555                     			.c_start  0c87h,100
-  556  512B     A2 36       			ldx	#.low.&GameMTEvent
+  556  512B     A2 60       			ldx	#.low.&GameMTEvent
   557  512D     86 26       			stx	__addr_reg
   558  512F     A2 90       			ldx	#.high.&GameMTEvent+1
   559  5131     86 27       			stx	__addr_reg+1
@@ -639,9 +639,9 @@
   573                     			.f_start  0e59h,114
   574                     			.bank_table
   575                     			.global	&GameMTGetInput
-  576  9003     3A 51 E0    	&GameMTGetInput:	.bankaddr	_GameMTGetInput
+  576  902D     3A 51 E0    	&GameMTGetInput:	.bankaddr	_GameMTGetInput
   577                     			.ends
-  578         3410 513A   	_GameMTGetInput:	.equal	$
+  578         4512 513A   	_GameMTGetInput:	.equal	$
   579                     			.attrib	_GameMTGetInput,115,f,b
   580                     	;
   581                     	;
@@ -1002,7 +1002,7 @@
   906         4719 52A2   	?SWL5:		.equal	$
   907                     	;GuiDownAppHelp(GameMTHelpData)
   908                     			.c_start  01151h,152
-  909  52A2     A9 3F       			lda	#.low._GameMTHelpData
+  909  52A2     A9 69       			lda	#.low._GameMTHelpData
   910  52A4     85 20       			sta	__oper1
   911  52A6     A9 90       			lda	#.high._GameMTHelpData
   912  52A8     85 21       			sta	__oper1+1
@@ -1109,9 +1109,9 @@
  1008                     			.f_start  01454h,181
  1009                     			.bank_table
  1010                     			.global	&GameMTRefresh
- 1011  9006     FF 52 E0    	&GameMTRefresh:	.bankaddr	_GameMTRefresh
+ 1011  9030     FF 52 E0    	&GameMTRefresh:	.bankaddr	_GameMTRefresh
  1012                     			.ends
- 1013         3710 52FF   	_GameMTRefresh:	.equal	$
+ 1013         3113 52FF   	_GameMTRefresh:	.equal	$
  1014                     			.attrib	_GameMTRefresh,182,f,b
  1015                     	;
   Tue Jan 13 23:03:19 2026                                                                                               Page   19
@@ -1287,7 +1287,7 @@
  1171  53D6     20 AF D6    			jsr	__mult_int
  1172  53D9     18          			clc
  1173  53DA     A5 20       			lda	__oper1
- 1174  53DC     69 9E       			adc	#.low._GameMTHeroPic
+ 1174  53DC     69 C8       			adc	#.low._GameMTHeroPic
  1175  53DE     85 20       			sta	__oper1
  1176  53E0     A5 21       			lda	__oper1+1
  1177  53E2     69 90       			adc	#.high._GameMTHeroPic
@@ -1491,7 +1491,7 @@
 
 
 
- 1357  5537     69 16       			adc	#.low._GameMTUnitPic
+ 1357  5537     69 40       			adc	#.low._GameMTUnitPic
  1358  5539     85 20       			sta	__oper1
  1359  553B     A5 21       			lda	__oper1+1
  1360  553D     69 B4       			adc	#.high._GameMTUnitPic
@@ -1573,9 +1573,9 @@
  1431                     			.f_start  017a1h,204
  1432                     			.bank_table
  1433                     			.global	&GameMTTalk
- 1434  9009     AA 55 E0    	&GameMTTalk:	.bankaddr	_GameMTTalk
+ 1434  9033     AA 55 E0    	&GameMTTalk:	.bankaddr	_GameMTTalk
  1435                     			.ends
- 1436         3A10 55AA   	_GameMTTalk:	.equal	$
+ 1436         3413 55AA   	_GameMTTalk:	.equal	$
  1437                     			.attrib	_GameMTTalk,205,f,b
  1438  55AA     20 AA DA    			jsr	__store_char_funct_arg
  1439                     	;
@@ -1691,7 +1691,7 @@
  1539  5636     91 28       			sta	(__stack_ptr),y
  1540  5638     A9 00       			lda	#0
  1541  563A     20 AA DA    			jsr	__store_char_funct_arg
- 1542  563D     A9 9E       			lda	#.low._GameMTTalkUp
+ 1542  563D     A9 C8       			lda	#.low._GameMTTalkUp
  1543  563F     85 20       			sta	__oper1
  1544  5641     A9 91       			lda	#.high._GameMTTalkUp
  1545  5643     85 21       			sta	__oper1+1
@@ -1753,9 +1753,9 @@
  1596  56A2     91 28       			sta	(__stack_ptr),y
  1597  56A4     A9 00       			lda	#0
  1598  56A6     20 AA DA    			jsr	__store_char_funct_arg
- 1599  56A9     A9 D7       			lda	#.low._GameMTTalkDown
+ 1599  56A9     A9 01       			lda	#.low._GameMTTalkDown
  1600  56AB     85 20       			sta	__oper1
- 1601  56AD     A9 91       			lda	#.high._GameMTTalkDown
+ 1601  56AD     A9 92       			lda	#.high._GameMTTalkDown
  1602  56AF     85 21       			sta	__oper1+1
  1603  56B1     20 CA DA    			jsr	__store_int_funct_arg
  1604  56B4     A0 19       			ldy	#+1+?LSC3+3
@@ -1874,7 +1874,7 @@
  1707  5761     91 28       			sta	(__stack_ptr),y
  1708  5763     A9 00       			lda	#0
  1709  5765     20 AA DA    			jsr	__store_char_funct_arg
- 1710  5768     A9 10       			lda	#.low._GameMTTalkSide
+ 1710  5768     A9 3A       			lda	#.low._GameMTTalkSide
  1711  576A     85 20       			sta	__oper1
  1712  576C     A9 92       			lda	#.high._GameMTTalkSide
  1713  576E     85 21       			sta	__oper1+1
@@ -1956,7 +1956,7 @@
  1784  57F5     91 28       			sta	(__stack_ptr),y
  1785  57F7     A9 00       			lda	#0
  1786  57F9     20 AA DA    			jsr	__store_char_funct_arg
- 1787  57FC     A9 10       			lda	#.low._GameMTTalkSide
+ 1787  57FC     A9 3A       			lda	#.low._GameMTTalkSide
  1788  57FE     85 20       			sta	__oper1
  1789  5800     A9 92       			lda	#.high._GameMTTalkSide
  1790  5802     85 21       			sta	__oper1+1
@@ -2187,7 +2187,7 @@
  1995  5963     20 AF D6    			jsr	__mult_int
  1996  5966     18          			clc
  1997  5967     A5 20       			lda	__oper1
- 1998  5969     69 54       			adc	#.low._GameMTTalkData
+ 1998  5969     69 7E       			adc	#.low._GameMTTalkData
  1999  596B     85 20       			sta	__oper1
  2000  596D     A5 21       			lda	__oper1+1
  2001  596F     69 92       			adc	#.high._GameMTTalkData
@@ -2267,7 +2267,7 @@
  2070  59E1     B1 28       			lda	(__stack_ptr),y
  2071  59E3     85 21       			sta	__oper1+1
  2072  59E5     20 CA DA    			jsr	__store_int_funct_arg
- 2073  59E8     A2 30       			ldx	#.low.&GameMTGetTalk
+ 2073  59E8     A2 5A       			ldx	#.low.&GameMTGetTalk
  2074  59EA     86 26       			stx	__addr_reg
  2075  59EC     A2 90       			ldx	#.high.&GameMTGetTalk+1
  2076  59EE     86 27       			stx	__addr_reg+1
@@ -2364,7 +2364,7 @@
  2157                     			.c_end	01abah,232
  2158                     	;GameMTGetInput()
  2159                     			.c_start  01ac3h,233
- 2160  5A6B     A2 03       			ldx	#.low.&GameMTGetInput
+ 2160  5A6B     A2 2D       			ldx	#.low.&GameMTGetInput
  2161  5A6D     86 26       			stx	__addr_reg
  2162  5A6F     A2 90       			ldx	#.high.&GameMTGetInput+1
  2163  5A71     86 27       			stx	__addr_reg+1
@@ -2435,7 +2435,7 @@
  2223  5AC1     69 2D       			adc	#45
  2224  5AC3     A0 16       			ldy	#+1+?LSC3
  2225  5AC5     91 28       			sta	(__stack_ptr),y
- 2226  5AC7     A9 20       			lda	#.low._GameMTTalkSigh+0
+ 2226  5AC7     A9 4A       			lda	#.low._GameMTTalkSigh+0
  2227  5AC9     85 20       			sta	__oper1
  2228  5ACB     A9 92       			lda	#.high._GameMTTalkSigh+0
  2229  5ACD     85 21       			sta	__oper1+1
@@ -2534,7 +2534,7 @@
  2317  5B5F     69 2D       			adc	#45
  2318  5B61     A0 16       			ldy	#+1+?LSC3
  2319  5B63     91 28       			sta	(__stack_ptr),y
- 2320  5B65     A9 3A       			lda	#.low._GameMTTalkSigh+26
+ 2320  5B65     A9 64       			lda	#.low._GameMTTalkSigh+26
  2321  5B67     85 20       			sta	__oper1
  2322  5B69     A9 92       			lda	#.high._GameMTTalkSigh+26
  2323  5B6B     85 21       			sta	__oper1+1
@@ -2701,7 +2701,7 @@
  2469                     			.local	_k,262,v,i,u,d,d,d,d,-6+?LSC4+0,00h
  2470                     	;GameMTMainMenu()
  2471                     			.c_start  01e37h,263
- 2472  5C39     A2 39       			ldx	#.low.&GameMTMainMenu
+ 2472  5C39     A2 63       			ldx	#.low.&GameMTMainMenu
  2473  5C3B     86 26       			stx	__addr_reg
  2474  5C3D     A2 90       			ldx	#.high.&GameMTMainMenu+1
  2475  5C3F     86 27       			stx	__addr_reg+1
@@ -2888,7 +2888,7 @@
  2641  5D0B     85 21       			sta	__oper1+1
  2642  5D0D     20 CA DA    			jsr	__store_int_funct_arg
  2643  5D10     A9 05       			lda	#5
- 2644  5D12     A2 09       			ldx	#.low.&GameMTTalk
+ 2644  5D12     A2 33       			ldx	#.low.&GameMTTalk
  2645  5D14     86 26       			stx	__addr_reg
  2646  5D16     A2 90       			ldx	#.high.&GameMTTalk+1
  2647  5D18     86 27       			stx	__addr_reg+1
@@ -2920,7 +2920,7 @@
  2668  5D38     85 21       			sta	__oper1+1
  2669  5D3A     20 CA DA    			jsr	__store_int_funct_arg
  2670  5D3D     A9 05       			lda	#5
- 2671  5D3F     A2 09       			ldx	#.low.&GameMTTalk
+ 2671  5D3F     A2 33       			ldx	#.low.&GameMTTalk
  2672  5D41     86 26       			stx	__addr_reg
  2673  5D43     A2 90       			ldx	#.high.&GameMTTalk+1
  2674  5D45     86 27       			stx	__addr_reg+1
@@ -2947,7 +2947,7 @@
  2695  5D65     85 21       			sta	__oper1+1
  2696  5D67     20 CA DA    			jsr	__store_int_funct_arg
  2697  5D6A     A9 05       			lda	#5
- 2698  5D6C     A2 09       			ldx	#.low.&GameMTTalk
+ 2698  5D6C     A2 33       			ldx	#.low.&GameMTTalk
  2699  5D6E     86 26       			stx	__addr_reg
  2700  5D70     A2 90       			ldx	#.high.&GameMTTalk+1
  2701  5D72     86 27       			stx	__addr_reg+1
@@ -2979,7 +2979,7 @@
 
 
 
- 2725  5D99     A2 09       			ldx	#.low.&GameMTTalk
+ 2725  5D99     A2 33       			ldx	#.low.&GameMTTalk
  2726  5D9B     86 26       			stx	__addr_reg
  2727  5D9D     A2 90       			ldx	#.high.&GameMTTalk+1
  2728  5D9F     86 27       			stx	__addr_reg+1
@@ -3006,7 +3006,7 @@
  2749  5DBF     85 21       			sta	__oper1+1
  2750  5DC1     20 CA DA    			jsr	__store_int_funct_arg
  2751  5DC4     A9 05       			lda	#5
- 2752  5DC6     A2 09       			ldx	#.low.&GameMTTalk
+ 2752  5DC6     A2 33       			ldx	#.low.&GameMTTalk
  2753  5DC8     86 26       			stx	__addr_reg
  2754  5DCA     A2 90       			ldx	#.high.&GameMTTalk+1
  2755  5DCC     86 27       			stx	__addr_reg+1
@@ -3033,7 +3033,7 @@
  2776  5DEC     85 21       			sta	__oper1+1
  2777  5DEE     20 CA DA    			jsr	__store_int_funct_arg
  2778  5DF1     A9 05       			lda	#5
- 2779  5DF3     A2 09       			ldx	#.low.&GameMTTalk
+ 2779  5DF3     A2 33       			ldx	#.low.&GameMTTalk
  2780  5DF5     86 26       			stx	__addr_reg
  2781  5DF7     A2 90       			ldx	#.high.&GameMTTalk+1
   Tue Jan 13 23:03:19 2026                                                                                               Page   50
@@ -3065,7 +3065,7 @@
  2803  5E19     85 21       			sta	__oper1+1
  2804  5E1B     20 CA DA    			jsr	__store_int_funct_arg
  2805  5E1E     A9 04       			lda	#4
- 2806  5E20     A2 09       			ldx	#.low.&GameMTTalk
+ 2806  5E20     A2 33       			ldx	#.low.&GameMTTalk
  2807  5E22     86 26       			stx	__addr_reg
  2808  5E24     A2 90       			ldx	#.high.&GameMTTalk+1
  2809  5E26     86 27       			stx	__addr_reg+1
@@ -3103,7 +3103,7 @@
 
 
 
- 2839  5E46     A2 33       			ldx	#.low.&GameMTGetMapData
+ 2839  5E46     A2 5D       			ldx	#.low.&GameMTGetMapData
  2840  5E48     86 26       			stx	__addr_reg
  2841  5E4A     A2 90       			ldx	#.high.&GameMTGetMapData+1
  2842  5E4C     86 27       			stx	__addr_reg+1
@@ -3253,7 +3253,7 @@
  2976                     			.c_start  0217dh,303
  2977  5F19     A9 00       			lda	#0
  2978  5F1B     20 AA DA    			jsr	__store_char_funct_arg
- 2979  5F1E     A9 6E       			lda	#.low._GameMTWorkPad
+ 2979  5F1E     A9 98       			lda	#.low._GameMTWorkPad
  2980  5F20     85 20       			sta	__oper1
  2981  5F22     A9 BD       			lda	#.high._GameMTWorkPad
  2982  5F24     85 21       			sta	__oper1+1
@@ -3297,7 +3297,7 @@
  3015                     			.c_end	021a5h,303
  3016                     	;GameMTReNewR()
  3017                     			.c_start  021a9h,304
- 3018  5F65     A2 2D       			ldx	#.low.&GameMTReNewR
+ 3018  5F65     A2 57       			ldx	#.low.&GameMTReNewR
  3019  5F67     86 26       			stx	__addr_reg
  3020  5F69     A2 90       			ldx	#.high.&GameMTReNewR+1
  3021  5F6B     86 27       			stx	__addr_reg+1
@@ -3584,7 +3584,7 @@
  3281  6132     20 AF D6    			jsr	__mult_int
  3282  6135     18          			clc
  3283  6136     A5 20       			lda	__oper1
- 3284  6138     69 16       			adc	#.low._GameMTUnitPic
+ 3284  6138     69 40       			adc	#.low._GameMTUnitPic
  3285  613A     85 20       			sta	__oper1
  3286  613C     A5 21       			lda	__oper1+1
  3287  613E     69 B4       			adc	#.high._GameMTUnitPic
@@ -3733,7 +3733,7 @@
  3414  6225     20 AF D6    			jsr	__mult_int
  3415  6228     18          			clc
  3416  6229     A5 20       			lda	__oper1
- 3417  622B     69 9E       			adc	#.low._GameMTHeroPic
+ 3417  622B     69 C8       			adc	#.low._GameMTHeroPic
  3418  622D     85 20       			sta	__oper1
  3419  622F     A5 21       			lda	__oper1+1
  3420  6231     69 90       			adc	#.high._GameMTHeroPic
@@ -3826,9 +3826,9 @@
  3502                     			.f_start  024ech,322
  3503                     			.bank_table
  3504                     			.global	&GameMTMove
- 3505  900C     BD 62 E0    	&GameMTMove:	.bankaddr	_GameMTMove
+ 3505  9036     BD 62 E0    	&GameMTMove:	.bankaddr	_GameMTMove
  3506                     			.ends
- 3507         4410 62BD   	_GameMTMove:	.equal	$
+ 3507         3713 62BD   	_GameMTMove:	.equal	$
  3508                     			.attrib	_GameMTMove,323,f,b
  3509                     	;
  3510                     	;
@@ -4117,9 +4117,9 @@
  3768                     			.f_start  02928h,355
  3769                     			.bank_table
  3770                     			.global	&GameMTPrintNum
- 3771  900F     C0 63 E0    	&GameMTPrintNum:	.bankaddr	_GameMTPrintNum
+ 3771  9039     C0 63 E0    	&GameMTPrintNum:	.bankaddr	_GameMTPrintNum
  3772                     			.ends
- 3773         4710 63C0   	_GameMTPrintNum:	.equal	$
+ 3773         3A13 63C0   	_GameMTPrintNum:	.equal	$
  3774                     			.attrib	_GameMTPrintNum,356,f,b
  3775  63C0     20 AA DA    			jsr	__store_char_funct_arg
  3776                     	;
@@ -5097,7 +5097,7 @@
  4668  695B     85 23       			sta	__oper2
  4669  695D     A5 21       			lda	__oper1+1
  4670  695F     85 24       			sta	__oper2+1
- 4671  6961     A9 CC       			lda	#.low._GameMTNum39
+ 4671  6961     A9 F6       			lda	#.low._GameMTNum39
  4672  6963     85 20       			sta	__oper1
  4673  6965     A9 AD       			lda	#.high._GameMTNum39
  4674  6967     85 21       			sta	__oper1+1
@@ -5302,7 +5302,7 @@
  4858  6A9F     85 23       			sta	__oper2
  4859  6AA1     A5 21       			lda	__oper1+1
  4860  6AA3     85 24       			sta	__oper2+1
- 4861  6AA5     A9 7C       			lda	#.low._GameMTNum78
+ 4861  6AA5     A9 A6       			lda	#.low._GameMTNum78
  4862  6AA7     85 20       			sta	__oper1
  4863  6AA9     A9 AD       			lda	#.high._GameMTNum78
  4864  6AAB     85 21       			sta	__oper1+1
@@ -5497,7 +5497,7 @@
  5038  6BD7     85 23       			sta	__oper2
  5039  6BD9     A5 21       			lda	__oper1+1
  5040  6BDB     85 24       			sta	__oper2+1
- 5041  6BDD     A9 26       			lda	#.low._GameMTNum35
+ 5041  6BDD     A9 50       			lda	#.low._GameMTNum35
  5042  6BDF     85 20       			sta	__oper1
  5043  6BE1     A9 AE       			lda	#.high._GameMTNum35
  5044  6BE3     85 21       			sta	__oper1+1
@@ -5586,9 +5586,9 @@
  5117                     			.f_start  02e15h,401
  5118                     			.bank_table
  5119                     			.global	&GameMTBattle
- 5120  9012     58 6C E0    	&GameMTBattle:	.bankaddr	_GameMTBattle
+ 5120  903C     58 6C E0    	&GameMTBattle:	.bankaddr	_GameMTBattle
  5121                     			.ends
- 5122         3311 6C58   	_GameMTBattle:	.equal	$
+ 5122         4413 6C58   	_GameMTBattle:	.equal	$
  5123                     			.attrib	_GameMTBattle,402,f,b
  5124  6C58     20 AA DA    			jsr	__store_char_funct_arg
  5125                     	;
@@ -5659,7 +5659,7 @@
  5185  6C94     85 21       			sta	__oper1+1
  5186  6C96     18          			clc
  5187  6C97     A5 20       			lda	__oper1
- 5188  6C99     69 34       			adc	#.low._GameMTVictory
+ 5188  6C99     69 5E       			adc	#.low._GameMTVictory
  5189  6C9B     85 20       			sta	__oper1
  5190  6C9D     A5 21       			lda	__oper1+1
  5191  6C9F     69 AD       			adc	#.high._GameMTVictory
@@ -5735,7 +5735,7 @@
  5256  6D02     26 21       			rol	__oper1+1
  5257  6D04     18          			clc
  5258  6D05     A5 20       			lda	__oper1
- 5259  6D07     69 CC       			adc	#.low._GameMTMonData
+ 5259  6D07     69 F6       			adc	#.low._GameMTMonData
  5260  6D09     85 20       			sta	__oper1
  5261  6D0B     A5 21       			lda	__oper1+1
  5262  6D0D     69 B2       			adc	#.high._GameMTMonData
@@ -5791,7 +5791,7 @@
  5307  6D5B     26 21       			rol	__oper1+1
  5308  6D5D     18          			clc
  5309  6D5E     A5 20       			lda	__oper1
- 5310  6D60     69 CC       			adc	#.low._GameMTMonData
+ 5310  6D60     69 F6       			adc	#.low._GameMTMonData
  5311  6D62     85 20       			sta	__oper1
  5312  6D64     A5 21       			lda	__oper1+1
  5313  6D66     69 B2       			adc	#.high._GameMTMonData
@@ -5846,7 +5846,7 @@
  5357  6DB4     26 21       			rol	__oper1+1
  5358  6DB6     18          			clc
  5359  6DB7     A5 20       			lda	__oper1
- 5360  6DB9     69 CC       			adc	#.low._GameMTMonData
+ 5360  6DB9     69 F6       			adc	#.low._GameMTMonData
  5361  6DBB     85 20       			sta	__oper1
  5362  6DBD     A5 21       			lda	__oper1+1
  5363  6DBF     69 B2       			adc	#.high._GameMTMonData
@@ -5908,7 +5908,7 @@
  5414  6E20     26 21       			rol	__oper1+1
  5415  6E22     18          			clc
  5416  6E23     A5 20       			lda	__oper1
- 5417  6E25     69 CC       			adc	#.low._GameMTMonData
+ 5417  6E25     69 F6       			adc	#.low._GameMTMonData
  5418  6E27     85 20       			sta	__oper1
  5419  6E29     A5 21       			lda	__oper1+1
  5420  6E2B     69 B2       			adc	#.high._GameMTMonData
@@ -6008,7 +6008,7 @@
  5509  6ED0     26 21       			rol	__oper1+1
  5510  6ED2     18          			clc
  5511  6ED3     A5 20       			lda	__oper1
- 5512  6ED5     69 CC       			adc	#.low._GameMTMonData
+ 5512  6ED5     69 F6       			adc	#.low._GameMTMonData
  5513  6ED7     85 20       			sta	__oper1
  5514  6ED9     A5 21       			lda	__oper1+1
  5515  6EDB     69 B2       			adc	#.high._GameMTMonData
@@ -6110,7 +6110,7 @@
  5601  6F6B     26 21       			rol	__oper1+1
  5602  6F6D     18          			clc
  5603  6F6E     A5 20       			lda	__oper1
- 5604  6F70     69 CC       			adc	#.low._GameMTMonData
+ 5604  6F70     69 F6       			adc	#.low._GameMTMonData
  5605  6F72     85 20       			sta	__oper1
  5606  6F74     A5 21       			lda	__oper1+1
  5607  6F76     69 B2       			adc	#.high._GameMTMonData
@@ -6172,7 +6172,7 @@
  5658  6FD7     26 21       			rol	__oper1+1
  5659  6FD9     18          			clc
  5660  6FDA     A5 20       			lda	__oper1
- 5661  6FDC     69 CC       			adc	#.low._GameMTMonData
+ 5661  6FDC     69 F6       			adc	#.low._GameMTMonData
  5662  6FDE     85 20       			sta	__oper1
  5663  6FE0     A5 21       			lda	__oper1+1
  5664  6FE2     69 B2       			adc	#.high._GameMTMonData
@@ -6287,7 +6287,7 @@
  5763  708D     26 21       			rol	__oper1+1
  5764  708F     18          			clc
  5765  7090     A5 20       			lda	__oper1
- 5766  7092     69 CC       			adc	#.low._GameMTMonData
+ 5766  7092     69 F6       			adc	#.low._GameMTMonData
  5767  7094     85 20       			sta	__oper1
  5768  7096     A5 21       			lda	__oper1+1
  5769  7098     69 B2       			adc	#.high._GameMTMonData
@@ -6344,7 +6344,7 @@
  5815  70EE     26 21       			rol	__oper1+1
  5816  70F0     18          			clc
  5817  70F1     A5 20       			lda	__oper1
- 5818  70F3     69 CC       			adc	#.low._GameMTMonData
+ 5818  70F3     69 F6       			adc	#.low._GameMTMonData
  5819  70F5     85 20       			sta	__oper1
  5820  70F7     A5 21       			lda	__oper1+1
  5821  70F9     69 B2       			adc	#.high._GameMTMonData
@@ -6486,7 +6486,7 @@
  5947  71C9     85 21       			sta	__oper1+1
  5948  71CB     18          			clc
  5949  71CC     A5 20       			lda	__oper1
- 5950  71CE     69 34       			adc	#.low._GameMTVictory
+ 5950  71CE     69 5E       			adc	#.low._GameMTVictory
  5951  71D0     85 20       			sta	__oper1
  5952  71D2     A5 21       			lda	__oper1+1
  5953  71D4     69 AD       			adc	#.high._GameMTVictory
@@ -6555,7 +6555,7 @@
  6011  7232     26 21       			rol	__oper1+1
  6012  7234     18          			clc
  6013  7235     A5 20       			lda	__oper1
- 6014  7237     69 CC       			adc	#.low._GameMTMonData
+ 6014  7237     69 F6       			adc	#.low._GameMTMonData
  6015  7239     85 20       			sta	__oper1
  6016  723B     A5 21       			lda	__oper1+1
  6017  723D     69 B2       			adc	#.high._GameMTMonData
@@ -6611,7 +6611,7 @@
  6062  728B     26 21       			rol	__oper1+1
  6063  728D     18          			clc
  6064  728E     A5 20       			lda	__oper1
- 6065  7290     69 CC       			adc	#.low._GameMTMonData
+ 6065  7290     69 F6       			adc	#.low._GameMTMonData
  6066  7292     85 20       			sta	__oper1
  6067  7294     A5 21       			lda	__oper1+1
  6068  7296     69 B2       			adc	#.high._GameMTMonData
@@ -6666,7 +6666,7 @@
  6112  72E4     26 21       			rol	__oper1+1
  6113  72E6     18          			clc
  6114  72E7     A5 20       			lda	__oper1
- 6115  72E9     69 CC       			adc	#.low._GameMTMonData
+ 6115  72E9     69 F6       			adc	#.low._GameMTMonData
  6116  72EB     85 20       			sta	__oper1
  6117  72ED     A5 21       			lda	__oper1+1
  6118  72EF     69 B2       			adc	#.high._GameMTMonData
@@ -6728,7 +6728,7 @@
  6169  7350     26 21       			rol	__oper1+1
  6170  7352     18          			clc
  6171  7353     A5 20       			lda	__oper1
- 6172  7355     69 CC       			adc	#.low._GameMTMonData
+ 6172  7355     69 F6       			adc	#.low._GameMTMonData
  6173  7357     85 20       			sta	__oper1
  6174  7359     A5 21       			lda	__oper1+1
  6175  735B     69 B2       			adc	#.high._GameMTMonData
@@ -6847,7 +6847,7 @@
  6278  7416     26 21       			rol	__oper1+1
  6279  7418     18          			clc
  6280  7419     A5 20       			lda	__oper1
- 6281  741B     69 CC       			adc	#.low._GameMTMonData
+ 6281  741B     69 F6       			adc	#.low._GameMTMonData
  6282  741D     85 20       			sta	__oper1
  6283  741F     A5 21       			lda	__oper1+1
  6284  7421     69 B2       			adc	#.high._GameMTMonData
@@ -6966,7 +6966,7 @@
  6387  74CC     26 21       			rol	__oper1+1
  6388  74CE     18          			clc
  6389  74CF     A5 20       			lda	__oper1
- 6390  74D1     69 CC       			adc	#.low._GameMTMonData
+ 6390  74D1     69 F6       			adc	#.low._GameMTMonData
  6391  74D3     85 20       			sta	__oper1
  6392  74D5     A5 21       			lda	__oper1+1
  6393  74D7     69 B2       			adc	#.high._GameMTMonData
@@ -7028,7 +7028,7 @@
  6444  7538     26 21       			rol	__oper1+1
  6445  753A     18          			clc
  6446  753B     A5 20       			lda	__oper1
- 6447  753D     69 CC       			adc	#.low._GameMTMonData
+ 6447  753D     69 F6       			adc	#.low._GameMTMonData
  6448  753F     85 20       			sta	__oper1
  6449  7541     A5 21       			lda	__oper1+1
  6450  7543     69 B2       			adc	#.high._GameMTMonData
@@ -7160,7 +7160,7 @@
  6566  7609     26 21       			rol	__oper1+1
  6567  760B     18          			clc
  6568  760C     A5 20       			lda	__oper1
- 6569  760E     69 CC       			adc	#.low._GameMTMonData
+ 6569  760E     69 F6       			adc	#.low._GameMTMonData
  6570  7610     85 20       			sta	__oper1
  6571  7612     A5 21       			lda	__oper1+1
  6572  7614     69 B2       			adc	#.high._GameMTMonData
@@ -7217,7 +7217,7 @@
  6618  766A     26 21       			rol	__oper1+1
  6619  766C     18          			clc
  6620  766D     A5 20       			lda	__oper1
- 6621  766F     69 CC       			adc	#.low._GameMTMonData
+ 6621  766F     69 F6       			adc	#.low._GameMTMonData
  6622  7671     85 20       			sta	__oper1
  6623  7673     A5 21       			lda	__oper1+1
  6624  7675     69 B2       			adc	#.high._GameMTMonData
@@ -7359,7 +7359,7 @@
  6750  7745     85 21       			sta	__oper1+1
  6751  7747     18          			clc
  6752  7748     A5 20       			lda	__oper1
- 6753  774A     69 34       			adc	#.low._GameMTVictory
+ 6753  774A     69 5E       			adc	#.low._GameMTVictory
  6754  774C     85 20       			sta	__oper1
  6755  774E     A5 21       			lda	__oper1+1
  6756  7750     69 AD       			adc	#.high._GameMTVictory
@@ -7428,7 +7428,7 @@
  6814  77AE     26 21       			rol	__oper1+1
  6815  77B0     18          			clc
  6816  77B1     A5 20       			lda	__oper1
- 6817  77B3     69 CC       			adc	#.low._GameMTMonData
+ 6817  77B3     69 F6       			adc	#.low._GameMTMonData
  6818  77B5     85 20       			sta	__oper1
  6819  77B7     A5 21       			lda	__oper1+1
  6820  77B9     69 B2       			adc	#.high._GameMTMonData
@@ -7477,7 +7477,7 @@
  6858  77FD     85 21       			sta	__oper1+1
  6859  77FF     20 CA DA    			jsr	__store_int_funct_arg
  6860  7802     A9 02       			lda	#2
- 6861  7804     A2 09       			ldx	#.low.&GameMTTalk
+ 6861  7804     A2 33       			ldx	#.low.&GameMTTalk
  6862  7806     86 26       			stx	__addr_reg
  6863  7808     A2 90       			ldx	#.high.&GameMTTalk+1
  6864  780A     86 27       			stx	__addr_reg+1
@@ -7529,7 +7529,7 @@
  6905  7842     26 21       			rol	__oper1+1
  6906  7844     18          			clc
  6907  7845     A5 20       			lda	__oper1
- 6908  7847     69 CC       			adc	#.low._GameMTMonData
+ 6908  7847     69 F6       			adc	#.low._GameMTMonData
  6909  7849     85 20       			sta	__oper1
  6910  784B     A5 21       			lda	__oper1+1
  6911  784D     69 B2       			adc	#.high._GameMTMonData
@@ -7571,7 +7571,7 @@
  6942         3918 788B   	?ACC7:		.equal	$
  6943  788B     A0 2A       			ldy	#+0+?LSC7+?TSC7
  6944  788D     B1 28       			lda	(__stack_ptr),y
- 6945  788F     A2 27       			ldx	#.low.&GameMTCountLose
+ 6945  788F     A2 51       			ldx	#.low.&GameMTCountLose
  6946  7891     86 26       			stx	__addr_reg
  6947  7893     A2 90       			ldx	#.high.&GameMTCountLose+1
  6948  7895     86 27       			stx	__addr_reg+1
@@ -7598,7 +7598,7 @@
  6969  78BA     85 21       			sta	__oper1+1
  6970  78BC     20 CA DA    			jsr	__store_int_funct_arg
  6971  78BF     A9 02       			lda	#2
- 6972  78C1     A2 09       			ldx	#.low.&GameMTTalk
+ 6972  78C1     A2 33       			ldx	#.low.&GameMTTalk
  6973  78C3     86 26       			stx	__addr_reg
  6974  78C5     A2 90       			ldx	#.high.&GameMTTalk+1
  6975  78C7     86 27       			stx	__addr_reg+1
@@ -7662,7 +7662,7 @@
  7028                     			.c_start  0336ch,452
  7029  7918     A9 00       			lda	#0
  7030  791A     20 AA DA    			jsr	__store_char_funct_arg
- 7031  791D     A9 58       			lda	#.low._GameMTBattlePad
+ 7031  791D     A9 82       			lda	#.low._GameMTBattlePad
  7032  791F     85 20       			sta	__oper1
  7033  7921     A9 AE       			lda	#.high._GameMTBattlePad
  7034  7923     85 21       			sta	__oper1+1
@@ -7712,7 +7712,7 @@
  7073  796B     26 21       			rol	__oper1+1
  7074  796D     18          			clc
  7075  796E     A5 20       			lda	__oper1
- 7076  7970     69 CC       			adc	#.low._GameMTMonData
+ 7076  7970     69 F6       			adc	#.low._GameMTMonData
  7077  7972     85 20       			sta	__oper1
  7078  7974     A5 21       			lda	__oper1+1
  7079  7976     69 B2       			adc	#.high._GameMTMonData
@@ -7761,7 +7761,7 @@
  7117  79B8     85 21       			sta	__oper1+1
  7118  79BA     20 FC DA    			jsr	__store_long_funct_arg
  7119  79BD     A9 01       			lda	#1
- 7120  79BF     A2 0F       			ldx	#.low.&GameMTPrintNum
+ 7120  79BF     A2 39       			ldx	#.low.&GameMTPrintNum
  7121  79C1     86 26       			stx	__addr_reg
  7122  79C3     A2 90       			ldx	#.high.&GameMTPrintNum+1
  7123  79C5     86 27       			stx	__addr_reg+1
@@ -7815,7 +7815,7 @@
 
 
 
- 7169  7A1B     A2 0F       			ldx	#.low.&GameMTPrintNum
+ 7169  7A1B     A2 39       			ldx	#.low.&GameMTPrintNum
  7170  7A1D     86 26       			stx	__addr_reg
  7171  7A1F     A2 90       			ldx	#.high.&GameMTPrintNum+1
  7172  7A21     86 27       			stx	__addr_reg+1
@@ -7864,7 +7864,7 @@
  7215  7A70     85 21       			sta	__oper1+1
  7216  7A72     20 FC DA    			jsr	__store_long_funct_arg
  7217  7A75     A9 01       			lda	#1
- 7218  7A77     A2 0F       			ldx	#.low.&GameMTPrintNum
+ 7218  7A77     A2 39       			ldx	#.low.&GameMTPrintNum
  7219  7A79     86 26       			stx	__addr_reg
  7220  7A7B     A2 90       			ldx	#.high.&GameMTPrintNum+1
  7221  7A7D     86 27       			stx	__addr_reg+1
@@ -7902,7 +7902,7 @@
  7248  7AA9     26 21       			rol	__oper1+1
  7249  7AAB     18          			clc
  7250  7AAC     A5 20       			lda	__oper1
- 7251  7AAE     69 CC       			adc	#.low._GameMTMonData
+ 7251  7AAE     69 F6       			adc	#.low._GameMTMonData
  7252  7AB0     85 20       			sta	__oper1
  7253  7AB2     A5 21       			lda	__oper1+1
  7254  7AB4     69 B2       			adc	#.high._GameMTMonData
@@ -7958,7 +7958,7 @@
  7299  7B0B     85 21       			sta	__oper1+1
  7300  7B0D     20 FC DA    			jsr	__store_long_funct_arg
  7301  7B10     A9 01       			lda	#1
- 7302  7B12     A2 0F       			ldx	#.low.&GameMTPrintNum
+ 7302  7B12     A2 39       			ldx	#.low.&GameMTPrintNum
  7303  7B14     86 26       			stx	__addr_reg
  7304  7B16     A2 90       			ldx	#.high.&GameMTPrintNum+1
  7305  7B18     86 27       			stx	__addr_reg+1
@@ -7991,7 +7991,7 @@
  7332  7B44     26 21       			rol	__oper1+1
  7333  7B46     18          			clc
  7334  7B47     A5 20       			lda	__oper1
- 7335  7B49     69 CC       			adc	#.low._GameMTMonData
+ 7335  7B49     69 F6       			adc	#.low._GameMTMonData
  7336  7B4B     85 20       			sta	__oper1
  7337  7B4D     A5 21       			lda	__oper1+1
  7338  7B4F     69 B2       			adc	#.high._GameMTMonData
@@ -8047,7 +8047,7 @@
  7383  7BA6     85 21       			sta	__oper1+1
  7384  7BA8     20 FC DA    			jsr	__store_long_funct_arg
  7385  7BAB     A9 01       			lda	#1
- 7386  7BAD     A2 0F       			ldx	#.low.&GameMTPrintNum
+ 7386  7BAD     A2 39       			ldx	#.low.&GameMTPrintNum
  7387  7BAF     86 26       			stx	__addr_reg
  7388  7BB1     A2 90       			ldx	#.high.&GameMTPrintNum+1
  7389  7BB3     86 27       			stx	__addr_reg+1
@@ -8085,7 +8085,7 @@
  7416  7BDF     26 21       			rol	__oper1+1
  7417  7BE1     18          			clc
  7418  7BE2     A5 20       			lda	__oper1
- 7419  7BE4     69 CC       			adc	#.low._GameMTMonData
+ 7419  7BE4     69 F6       			adc	#.low._GameMTMonData
  7420  7BE6     85 20       			sta	__oper1
  7421  7BE8     A5 21       			lda	__oper1+1
  7422  7BEA     69 B2       			adc	#.high._GameMTMonData
@@ -8141,7 +8141,7 @@
  7467  7C41     85 21       			sta	__oper1+1
  7468  7C43     20 FC DA    			jsr	__store_long_funct_arg
  7469  7C46     A9 01       			lda	#1
- 7470  7C48     A2 0F       			ldx	#.low.&GameMTPrintNum
+ 7470  7C48     A2 39       			ldx	#.low.&GameMTPrintNum
  7471  7C4A     86 26       			stx	__addr_reg
  7472  7C4C     A2 90       			ldx	#.high.&GameMTPrintNum+1
  7473  7C4E     86 27       			stx	__addr_reg+1
@@ -8239,7 +8239,7 @@
  7559  7CF1     20 AF D6    			jsr	__mult_int
  7560  7CF4     18          			clc
  7561  7CF5     A5 20       			lda	__oper1
- 7562  7CF7     69 16       			adc	#.low._GameMTUnitPic
+ 7562  7CF7     69 40       			adc	#.low._GameMTUnitPic
  7563  7CF9     85 20       			sta	__oper1
  7564  7CFB     A5 21       			lda	__oper1+1
  7565  7CFD     69 B4       			adc	#.high._GameMTUnitPic
@@ -8305,7 +8305,7 @@
  7620                     			.c_end	0358dh,463
  7621                     	;GameMTGetInput()
  7622                     			.c_start  03596h,464
- 7623  7D57     A2 03       			ldx	#.low.&GameMTGetInput
+ 7623  7D57     A2 2D       			ldx	#.low.&GameMTGetInput
   Tue Jan 13 23:03:19 2026                                                                                               Page  135
 
 
@@ -8397,7 +8397,7 @@
  7702  7DC2     26 21       			rol	__oper1+1
  7703  7DC4     18          			clc
  7704  7DC5     A5 20       			lda	__oper1
- 7705  7DC7     69 CC       			adc	#.low._GameMTMonData
+ 7705  7DC7     69 F6       			adc	#.low._GameMTMonData
  7706  7DC9     85 20       			sta	__oper1
  7707  7DCB     A5 21       			lda	__oper1+1
  7708  7DCD     69 B2       			adc	#.high._GameMTMonData
@@ -8475,7 +8475,7 @@
  7775  7E4A     26 21       			rol	__oper1+1
  7776  7E4C     18          			clc
  7777  7E4D     A5 20       			lda	__oper1
- 7778  7E4F     69 CC       			adc	#.low._GameMTMonData
+ 7778  7E4F     69 F6       			adc	#.low._GameMTMonData
  7779  7E51     85 20       			sta	__oper1
  7780  7E53     A5 21       			lda	__oper1+1
  7781  7E55     69 B2       			adc	#.high._GameMTMonData
@@ -8631,7 +8631,7 @@
  7916  7F39     85 21       			sta	__oper1+1
  7917  7F3B     20 FC DA    			jsr	__store_long_funct_arg
  7918  7F3E     A9 01       			lda	#1
- 7919  7F40     A2 0F       			ldx	#.low.&GameMTPrintNum
+ 7919  7F40     A2 39       			ldx	#.low.&GameMTPrintNum
  7920  7F42     86 26       			stx	__addr_reg
  7921  7F44     A2 90       			ldx	#.high.&GameMTPrintNum+1
  7922  7F46     86 27       			stx	__addr_reg+1
@@ -8665,7 +8665,7 @@
  7950  7F72     26 21       			rol	__oper1+1
  7951  7F74     18          			clc
  7952  7F75     A5 20       			lda	__oper1
- 7953  7F77     69 CC       			adc	#.low._GameMTMonData
+ 7953  7F77     69 F6       			adc	#.low._GameMTMonData
  7954  7F79     85 20       			sta	__oper1
  7955  7F7B     A5 21       			lda	__oper1+1
  7956  7F7D     69 B2       			adc	#.high._GameMTMonData
@@ -8722,7 +8722,7 @@
  8002  7FD2     26 21       			rol	__oper1+1
  8003  7FD4     18          			clc
  8004  7FD5     A5 20       			lda	__oper1
- 8005  7FD7     69 CC       			adc	#.low._GameMTMonData
+ 8005  7FD7     69 F6       			adc	#.low._GameMTMonData
  8006  7FD9     85 20       			sta	__oper1
  8007  7FDB     A5 21       			lda	__oper1+1
  8008  7FDD     69 B2       			adc	#.high._GameMTMonData
@@ -8822,7 +8822,7 @@
  8092  8078     85 21       			sta	__oper1+1
  8093  807A     20 FC DA    			jsr	__store_long_funct_arg
  8094  807D     A9 01       			lda	#1
- 8095  807F     A2 0F       			ldx	#.low.&GameMTPrintNum
+ 8095  807F     A2 39       			ldx	#.low.&GameMTPrintNum
  8096  8081     86 26       			stx	__addr_reg
  8097  8083     A2 90       			ldx	#.high.&GameMTPrintNum+1
  8098  8085     86 27       			stx	__addr_reg+1
@@ -8972,7 +8972,7 @@
  8232  816C     26 21       			rol	__oper1+1
  8233  816E     18          			clc
  8234  816F     A5 20       			lda	__oper1
- 8235  8171     69 CC       			adc	#.low._GameMTMonData
+ 8235  8171     69 F6       			adc	#.low._GameMTMonData
  8236  8173     85 20       			sta	__oper1
  8237  8175     A5 21       			lda	__oper1+1
  8238  8177     69 B2       			adc	#.high._GameMTMonData
@@ -9030,7 +9030,7 @@
  8285  81CE     26 21       			rol	__oper1+1
  8286  81D0     18          			clc
  8287  81D1     A5 20       			lda	__oper1
- 8288  81D3     69 CC       			adc	#.low._GameMTMonData
+ 8288  81D3     69 F6       			adc	#.low._GameMTMonData
  8289  81D5     85 20       			sta	__oper1
  8290  81D7     A5 21       			lda	__oper1+1
  8291  81D9     69 B2       			adc	#.high._GameMTMonData
@@ -9105,7 +9105,7 @@
  8355                     			.c_end	038d3h,487
  8356                     	;GameMTReNewR()
  8357                     			.c_start  038d7h,488
- 8358  8250     A2 2D       			ldx	#.low.&GameMTReNewR
+ 8358  8250     A2 57       			ldx	#.low.&GameMTReNewR
  8359  8252     86 26       			stx	__addr_reg
  8360  8254     A2 90       			ldx	#.high.&GameMTReNewR+1
  8361  8256     86 27       			stx	__addr_reg+1
@@ -9143,9 +9143,9 @@
  8388                     			.f_start  03abah,502
  8389                     			.bank_table
  8390                     			.global	&GameMTOpenDoor
- 8391  9015     73 82 E0    	&GameMTOpenDoor:	.bankaddr	_GameMTOpenDoor
+ 8391  903F     73 82 E0    	&GameMTOpenDoor:	.bankaddr	_GameMTOpenDoor
  8392                     			.ends
- 8393         3611 8273   	_GameMTOpenDoor:	.equal	$
+ 8393         4713 8273   	_GameMTOpenDoor:	.equal	$
  8394                     			.attrib	_GameMTOpenDoor,503,f,b
  8395                     	;
  8396                     	;
@@ -9280,7 +9280,7 @@
  8515  8332     20 AF D6    			jsr	__mult_int
  8516  8335     18          			clc
  8517  8336     A5 20       			lda	__oper1
- 8518  8338     69 16       			adc	#.low._GameMTUnitPic
+ 8518  8338     69 40       			adc	#.low._GameMTUnitPic
  8519  833A     85 20       			sta	__oper1
  8520  833C     A5 21       			lda	__oper1+1
  8521  833E     69 B4       			adc	#.high._GameMTUnitPic
@@ -9463,7 +9463,7 @@
  8683         3914 844B   	?FLB66:		.equal	$
  8684                     	;GameMTGetInput()
  8685                     			.c_start  03be7h,511
- 8686  844B     A2 03       			ldx	#.low.&GameMTGetInput
+ 8686  844B     A2 2D       			ldx	#.low.&GameMTGetInput
  8687  844D     86 26       			stx	__addr_reg
  8688  844F     A2 90       			ldx	#.high.&GameMTGetInput+1
  8689  8451     86 27       			stx	__addr_reg+1
@@ -9761,7 +9761,7 @@
  8954         3110 8603   	?FLB69:		.equal	$
  8955                     	;GameMTGetInput()
  8956                     			.c_start  03db7h,521
- 8957  8603     A2 03       			ldx	#.low.&GameMTGetInput
+ 8957  8603     A2 2D       			ldx	#.low.&GameMTGetInput
  8958  8605     86 26       			stx	__addr_reg
  8959  8607     A2 90       			ldx	#.high.&GameMTGetInput+1
  8960  8609     86 27       			stx	__addr_reg+1
@@ -10068,9 +10068,9 @@
  9235                     			.f_start  040cdh,542
  9236                     			.bank_table
  9237                     			.global	&GameMTNewFloor
- 9238  9018     C2 87 E0    	&GameMTNewFloor:	.bankaddr	_GameMTNewFloor
+ 9238  9042     C2 87 E0    	&GameMTNewFloor:	.bankaddr	_GameMTNewFloor
  9239                     			.ends
- 9240         3911 87C2   	_GameMTNewFloor:	.equal	$
+ 9240         3314 87C2   	_GameMTNewFloor:	.equal	$
  9241                     			.attrib	_GameMTNewFloor,543,f,b
  9242                     	;
  9243                     	;
@@ -10515,7 +10515,7 @@
  9646         3410 8A04   	?EOI80:		.equal	$
  9647                     	;GameMTRefresh()
  9648                     			.c_start  04317h,566
- 9649  8A04     A2 06       			ldx	#.low.&GameMTRefresh
+ 9649  8A04     A2 30       			ldx	#.low.&GameMTRefresh
  9650  8A06     86 26       			stx	__addr_reg
  9651  8A08     A2 90       			ldx	#.high.&GameMTRefresh+1
  9652  8A0A     86 27       			stx	__addr_reg+1
@@ -10578,9 +10578,9 @@
  9704                     			.f_start  04501h,580
  9705                     			.bank_table
  9706                     			.global	&GameMTEndFace
- 9707  901B     56 8A E0    	&GameMTEndFace:	.bankaddr	_GameMTEndFace
+ 9707  9045     56 8A E0    	&GameMTEndFace:	.bankaddr	_GameMTEndFace
  9708                     			.ends
- 9709         4311 8A56   	_GameMTEndFace:	.equal	$
+ 9709         3614 8A56   	_GameMTEndFace:	.equal	$
  9710                     			.attrib	_GameMTEndFace,581,f,b
  9711                     	;
  9712                     	;
